@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root 
+{
+    --clr-bg: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+    --clr-input-bg: #F6F6F624 0% 0% no-repeat padding-box;
+    --clr-btn-bg: #FFFFFF 0% 0% no-repeat padding-box;
+
+    --clr-h1: #FFFFFF;
+    --clr-h2: #FFFFFF;
+    --clr-p: #F9F9F9;
+    --clr-btn: #1C1C1C;
+
+    --ff-h1: normal normal normal 160px / 231px Satisfy;
+    --ff-h2: normal normal normal 32px/38px "Varela Round";
+    --ff-p: normal normal normal 16px/20px "Varela Round";
+    --ff-label: normal normal normal 16px/20px "Varela Round";
+    --ff-button: normal normal normal 16px/20px "Varela Round";
+    
+    --ts-h1: 0px 0px 36px #00000087;
+}
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    max-width: 100vw;
+    max-height:100vh;
+}
+
+main 
+{
+    background: var(--clr-bg);
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner
+{
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 33%;
+}
+.banner h1
+{
+    font: var(--ff-h1);
+    color: var(--clr-h1);
+    text-shadow: var(--ts-h1);
+    text-align: center;
+    opacity: 0.9;
+}
+.banner h2
+{
+    font: var(--ff-h2);
+    color: var(--clr-h2);
+    text-align: center;
+    opacity: 0.95;
+}
+.banner p
+{
+    font: var(--ff-p);
+    color: var(--clr-p);
+    text-align: center;
+    opacity: 0.95;
+}
+.promotext
+{
+    width: 70%;
+    opacity: 0.9;
+}
+
+form 
+{
+    width: 100%;
+}
+.formBox
+{
+    display: flex;
+    width: 65%;
+    gap: 1em;
+    margin-top: 1em;
+}
+.inputBox
+{
+    display: flex;
+    gap: 2em;
+}
+.formInputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.formBox label
+{
+    font:var(--ff-label-p);
+    color: var(--clr-p);
+    opacity: 0.9;
+    width: 100%;
+}
+.formBox input
+{
+    background: var(--clr-input-bg);
+    border: 2px solid #FFFFFF;
+    height: 3.125em;
+    width: 100%;
+}
+#sbtn
+{
+    color: var(--clr-btn);
+    font: var(--ff-button);
+    background: var(--clr-btn-bg);
+    width: 30%;
+    height: 2.6em;
+    margin-top: 1.15em;
+    border: none;
+}
+
+
+@media (max-width: 1100px)
+{
+    :root
+    {
+        --clr-btn: #2823FD;
+        --ff-h1: normal normal normal 60px/86px Satisfy;
+        --ff-h2: normal normal normal 18px/22px "Varela Round";
+        --ff-p: normal normal normal 16px/20px "Varela Round";
+        --ff-label: normal normal normal 11px/13px "Varela Round";
+        --ff-button: normal normal normal 14px/13px "Varela Round";
+    }
+    .inputBox, .formBox
+    {
+        flex-direction: column !important;
+    }
+    #sbtn
+    {
+    width: 100%;
+    height: 3.125em;
+    font-weight: 600;
+    }
+    .formBox
+    {width: 80%;}
+    .promotext
+    {width:85%;}
+}
