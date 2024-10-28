@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Project 6 - Consultation Request</title>
+</head>
+
+<body>
+    <div class="container">
+            <div class="l-container">
+                <div class="top-line"></div>
+                <div class="banner-image">
+                    <img src="images/Phone-Image.png" alt="">
+                </div>
+            </div>
+
+            <div class="r-container">
+                <div class="wa-btn">
+                    <div class="social-icons"><i class='bx bxl-whatsapp'></i></div>
+                </div>
+                <div class="consult-box">
+                    <h1>Free Consultation</h1>
+                    <p>
+                        To receive a free consultation, please leave your details and one of our experts will contact you.
+                    </p>
+                    <form>
+                    <div class="input-Box">
+                        <div class="inp-lab-box">
+                            <label for="name">Name</label>
+                            <input id="userName" type="text" name="name" required placeholder=" "
+                                pattern="([a-zA-Z]{3,25}) ([a-zA-Z]{3,25}|\.| |-|')+$" title="4-25 Chars, Letters only.">
+                        </div>
+                        <div class="inp-lab-box">
+                            <label for="email">Email</label>
+                            <input id="userEmail" required type="email" name="email" placeholder=" " pattern="[a-zA-Z0-9 \+ \- \.]+@([a-z]+\.)+[a-zA-Z]{2,8}" title="Example: Person@Company.com">
+                        </div>
+                    </div>
+                    <div class="message-box">
+                        <label for="message" class="msg-label">Your Experience</label>
+                        <br>
+                        <input id="userMessage" type="text" name="message" placeholder=" "
+                            pattern="[a-zA-Z0-9 \! \. \, \- \= \@ \# \: \; \+]{2,250}" title="250 Max Characters.">
+                    </div>
+                        <button id="sbtn">Submit</button>
+                    </form>
+                </div>
+                <div class="socialm">
+                    <div class="social-icons"><i class='bx bxl-facebook'></i></div>
+                    <div class="social-icons"><i class='bx bxl-instagram'></i></i></div>
+                    <div class="social-icons"><i class='bx bxl-linkedin'></i></div>
+                    <div class="social-icons"><i class='bx bxs-phone'></i></div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
