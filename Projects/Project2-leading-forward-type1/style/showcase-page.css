@@ -758,6 +758,16 @@
     overflow: hidden;
 }
 
+.projects-section
+{
+    padding: 2.5em 0 2.5em 0;
+}
+
+.projects-section iframe {
+    width: 95vw;
+    height: 100vh;
+}
+
 .typing-text span {
     -webkit-text-stroke: .7px var(--secondary);
 }
