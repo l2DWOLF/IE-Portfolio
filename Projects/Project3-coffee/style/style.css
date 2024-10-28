@@ -17,12 +17,11 @@
 
 .container {
   display: flex;
-  max-height: 100vw;
-  overflow: hidden;
+  height: 100vh;
 }
 
 .container-img {
-  height: 100vh;
+  height: 100%;
   border: 1px solid #707070;
 }
 
@@ -41,6 +40,12 @@
   direction: rtl;
   border: 1px solid #707070;
   max-height: 100vh;
+
+  overflow: scroll;
+}
+
+.container-form::-webkit-scrollbar {
+  display: none;
 }
 
 .form {
@@ -48,6 +53,7 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
+  max-height: 100vh;
 }
 
 .form-title {
@@ -89,7 +95,7 @@
   border: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   :root {
     --fs-title: normal normal 900 28px/41px Heebo;
     --fs-text: normal normal normal 15px/22px Heebo;
