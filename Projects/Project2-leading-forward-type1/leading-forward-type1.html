@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Project 2 - Leading you Forward</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+
+            <div class="envelope">
+            <h1>תן לנו להוביל אותך קדימה</h1>
+            <p class="promotext">
+                לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכ.
+            </p>
+            </div>
+            
+            <div class="form-container">
+                <form action="">
+                    <div class="form-box">
+                        <div class="form-inputs">
+                        <label for="name">שם מלא</label>
+                        <br>
+                        <input id="name" required type="text" pattern="([a-zA-Z]{3,25}) ([a-zA-Z]{3,25}|\.| |-|')+$" title="4-25 Chars, Full Name - Letters only.">
+                        </div>
+
+                        <div class="form-inputs">
+                        <label for="email">דוא״ל</label>
+                        <br>
+                        <input id="email" required type="email" pattern="[a-zA-Z0-9 \+ \- \.]+@([a-z]+\.)+[a-zA-Z]{2,8}" title="Example: Person@Company.com">
+                        </div>
+                            <button>שליחה</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </main>
+</body>
+
+</html>
