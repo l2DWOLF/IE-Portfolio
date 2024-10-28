@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fs-title: normal normal 900 43px/63px Heebo;
+  --fs-text: normal normal normal 20px/29px Heebo;
+  --fs-label: normal normal bold 16px/24px Heebo;
+  --fs-btn: normal normal bold 22px/30px Heebo;
+
+  --clr-blue: #020253;
+  --clr-label: #2c2c2c;
+  --clr-inputbg: #e5eeff 0% 0% no-repeat padding-box;
+}
+
+.container {
+  display: flex;
+  max-height: 100vw;
+  overflow: hidden;
+}
+
+.container-img {
+  height: 100vh;
+  border: 1px solid #707070;
+}
+
+.container-img>img {
+  height: 100%;
+  width: 60vw;
+  object-fit: cover;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  direction: rtl;
+  border: 1px solid #707070;
+  max-height: 100vh;
+}
+
+.form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form-title {
+  font: var(--fs-title);
+  color: var(--clr-blue);
+}
+
+.form-text {
+  font: var(--fs-text);
+  color: var(--clr-blue);
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control>label {
+  font: var(--fs-label);
+  color: var(--clr-label);
+}
+
+.form-control>input {
+  width: 90%;
+  height: 50px;
+  background: var(--clr-inputbg);
+  border: 0;
+  border-bottom: 4px solid var(--clr-blue);
+}
+
+.form>button {
+  width: 166px;
+  height: 50px;
+  background: var(--clr-blue) 0% 0% no-repeat padding-box;
+  font: var(--fs-btn);
+  letter-spacing: 0.33px;
+  color: #ffffff;
+  margin-top: 15px;
+  border: none;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --fs-title: normal normal 900 28px/41px Heebo;
+    --fs-text: normal normal normal 15px/22px Heebo;
+    --fs-label: normal normal bold 10px/14px Heebo;
+
+    --clr-blue: #020253;
+    --clr-label: #2c2c2c;
+  }
+
+  .container {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .container-img>img {
+    width: 100%;
+  }
+
+  .container-img {
+    height: 35vh;
+  }
+
+  .form-title {
+    font: var(--fs-title);
+  }
+
+  .form-text {
+    font: var(--fs-text);
+  }
+
+  .form-control>label {
+    font: var(--fs-label);
+  }
+
+  .form-control>input,
+  .form>button {
+    width: 100%;
+    padding: 0 43px;
+    height: 34px;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0 43px;
+    display: flex;
+  }
+
+  .container-form {
+    height: 50vh;
+  }
+}
