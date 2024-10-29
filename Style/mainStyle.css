@@ -666,15 +666,13 @@ header {
     backdrop-filter: blur(2px) !important;
 }
 
-.cards-box:hover~h4
-{
-        background: rgba(0, 0, 0, 0.758);
-}
-.cards-box:hover~p
-{
-        background: rgba(0, 0, 0, 0.758);
+.cards-box h4:hover {
+    background: rgba(0, 0, 0, 0.758);
 }
 
+.cards-box p:hover {
+    background: rgba(0, 0, 0, 0.758);
+}
 
 .projects-section h2
 {
@@ -1232,13 +1230,7 @@ header {
     
 }
 
-.cards-box h4:hover {
-    background: rgba(0, 0, 0, 0.758);
-}
 
-.cards-box p:hover {
-    background: rgba(0, 0, 0, 0.758);
-}
 
 .cards-box
 {
