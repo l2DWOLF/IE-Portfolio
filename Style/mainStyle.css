@@ -643,7 +643,7 @@ header {
 }
 
 .cards-box {
-    background: rgba(0, 0, 0, 0.33);
+    background: rgba(0, 0, 0, 0.2);
     object-fit: contain;
     min-height: 500px;
     padding: 0 0 0 0;
@@ -675,6 +675,10 @@ header {
 .projects-section h2
 {
     color:var(--secondary);
+    background:#00000050; 
+    width: 104%;
+    text-align: center;
+    margin-bottom: 1em;
 }
 .cards-box h4 {
     text-align: center;
@@ -712,7 +716,7 @@ header {
 
 }
 
-.cards-box img:hover {
+.cards-box:hover img, .cards-box img:hover {
     scale: 1.2;
 }
 
@@ -1041,7 +1045,7 @@ header {
 --secondary: #B8F3FF;
 --fs-h1: 2.3rem;
 --fs-h1-span: 4rem;
---fs-h2: 2.5rem;
+--fs-h2: 2.8rem;
 --fs-h3: 1.5rem;
 --fs-h4: 1.4rem;
 --fs-h5: 0.8rem;
