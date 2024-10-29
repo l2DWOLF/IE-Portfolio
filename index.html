@@ -65,11 +65,11 @@
             </p>
 
             <div class="social-icons"> <!-- --Social Icons-- -->
-                <a href="#" class="btn-type-1">Download CV</a>
+                <a href="/Files/IE-CV.pdf" class="btn-type-1" download>Download CV</a>
                 <div class="social-icons-box">
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/l2dwolf" target="_blank"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.linkedin.com/in/idan-elimeleh-itegroupnyc" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://www.instagram.com/idan.elimeleh/" target="_blank"><i class='bx bxl-instagram'></i></a>
                 </div>
             </div>
         </div>
@@ -87,15 +87,15 @@
     <!-- ------------------Aside Bar----------------- -->
     <aside id="aside-bar">
         <div class="aside-box">
-            <div class="aside-item"><a href="#"><i class='bx bxl-html5'></i><span>HTML</span></a></div>
-            <div class="aside-item"><a href="#"><i class='bx bxl-css3'></i><span>CSS</span></a></div>
-            <div class="aside-item"><a href="#"><i class='bx bxl-javascript'></i><span>JavaScript</span></a></div>
-            <div class="aside-item"><a href="#"><i class='bx bxl-sass'></i><span>Sass</span></a></div>
-            <div class="aside-item"><a href="#"><i class='bx bxl-bootstrap'></i><span>Bootstrap</span></a></div>
-            <div class="aside-item"><a href="#"><i class='bx bxl-react'></i><span>React</span></a></div>
-            <div class="aside-item"><a href="#"><i class='bx bxl-nodejs'></i><span>NodeJS</span></a></div>
-            <div class="aside-item"><a href="#"><i class='bx bxl-typescript'></i><span>TypeScript</span></a></div>
-            <div class="aside-item cpp" id="aside-item-cpp"><a href=" "><i class='bx bxl-c-plus-plus'></i><span>C++</span></a></div>
+            <div class="aside-item"><a><i class='bx bxl-html5'></i><span>HTML</span></a></div>
+            <div class="aside-item"><a><i class='bx bxl-css3'></i><span>CSS</span></a></div>
+            <div class="aside-item"><a><i class='bx bxl-javascript'></i><span>JavaScript</span></a></div>
+            <div class="aside-item"><a><i class='bx bxl-sass'></i><span>Sass</span></a></div>
+            <div class="aside-item"><a><i class='bx bxl-bootstrap'></i><span>Bootstrap</span></a></div>
+            <div class="aside-item"><a><i class='bx bxl-react'></i><span>React</span></a></div>
+            <div class="aside-item"><a><i class='bx bxl-nodejs'></i><span>NodeJS</span></a></div>
+            <div class="aside-item"><a><i class='bx bxl-typescript'></i><span>TypeScript</span></a></div>
+            <div class="aside-item cpp" id="aside-item-cpp"><a><i class='bx bxl-c-plus-plus'></i><span>C++</span></a></div>
         </div>
     </aside>
     <!-- ------------------Aside Bar End------------- -->
@@ -198,31 +198,44 @@
 
     <!-- ----------------Contact Section---------------- -->
     <section id="contact-section">
+        <div class="contact-info">
         <h2> Let's Talk </h2>
-
-            <div class="form-container"><!----Contact Form---->
-                <div class="contact-box">
-                    <form>
-                        <div class="user-box">
-                            <input id="userName" type="text" name="name" required placeholder=" " pattern="([a-zA-Z]{3,30}) ([a-zA-Z]{3,25}|\.| |-|')+$" title="Must Contain: First and Last Name, 3-30 letters only | Example: John Dough |" autocomplete="on">
-                            <label for="userName">Full Name</label>
+            <div class="img-btn-box" id="contact-btn-box">
+                <div class="logo-img" id="contact-logo-img"> <!-- --Headshot Image-- -->
+                    <div class="logo-img-box" id="contact-img-box">
+                        <div class="logo-img-item">
+                            <img src="Media/Logo/ProfileTransp.png" alt="Headshot Photo">
                         </div>
-                        <div class="user-box">
-                            <input id="userEmail" required type="email" name="email" placeholder=" " pattern="[a-zA-Z0-9 \+ \- \.]+@([a-z]+\.)+[a-zA-Z]{2,8}" title="Must be a valid email | Example: Person@Company.com |" autocomplete="on">
-                            <label for="userEmail">Email</label>
-                        </div>
-                        <div class="user-box">
-                            <input id="userPhone" required type="text" name="phone" placeholder=" " inputmode="numeric" pattern="[0-9]{9,14}" title="Must Contain 9 - 15 Numbers | Example: 3477549099 |" autocomplete="on">
-                            <label for="userPhone">Phone</label>
-                        </div>
-                        <div class="user-box">
-                            <input id="userMessage" type="text" name="message" placeholder=" " pattern="[a-zA-Z0-9 \! \. \, \- \= \@ \# \: \; \+]{2,250}" title="250 Max Characters.">
-                            <label for="userMessage" class="msg-label" >Message:</label>
-                        </div>
-                        <button type="submit" class="form-btn">Send</button>
-                    </form>
+                    </div>
+                </div>
+                <div class="social-icons"> <!-- --Social Icons-- -->
+                    <a href="/Files/IE-CV.pdf" class="btn-type-1" id="btn-contact" download>Download CV</a>
                 </div>
             </div>
+            </div>
+                <div class="form-container"><!----Contact Form---->
+                    <div class="contact-box">
+                        <form>
+                            <div class="user-box">
+                                <input id="userName" type="text" name="name" required placeholder=" " pattern="([a-zA-Z]{3,30}) ([a-zA-Z]{3,25}|\.| |-|')+$" title="Must Contain: First and Last Name, 3-30 letters only | Example: John Dough |" autocomplete="on">
+                                <label for="userName">Full Name</label>
+                            </div>
+                            <div class="user-box">
+                                <input id="userEmail" required type="email" name="email" placeholder=" " pattern="[a-zA-Z0-9 \+ \- \.]+@([a-z]+\.)+[a-zA-Z]{2,8}" title="Must be a valid email | Example: Person@Company.com |" autocomplete="on">
+                                <label for="userEmail">Email</label>
+                            </div>
+                            <div class="user-box">
+                                <input id="userPhone" required type="text" name="phone" placeholder=" " inputmode="numeric" pattern="[0-9]{9,14}" title="Must Contain 9 - 15 Numbers | Example: 3477549099 |" autocomplete="on">
+                                <label for="userPhone">Phone</label>
+                            </div>
+                            <div class="user-box">
+                                <input id="userMessage" type="text" name="message" placeholder=" " pattern="[a-zA-Z0-9 \! \. \, \- \= \@ \# \: \; \+]{2,250}" title="250 Max Characters.">
+                                <label for="userMessage" class="msg-label" >Message:</label>
+                            </div>
+                            <button type="submit" class="form-btn">Send</button>
+                        </form>
+                    </div>
+                </div>
         <p>I'm looking forward to hear from you :]</p>
     </section>
     <!-- --------------Contact Section End-------------- -->
