@@ -664,14 +664,17 @@ header {
     transform: scale(1.05);
     -webkit-backdrop-filter: blur(2px) !important;
     backdrop-filter: blur(2px) !important;
+    cursor: pointer;
 }
 
 .cards-box h4:hover {
     background: rgba(0, 0, 0, 0.758);
+    cursor: pointer;
 }
 
 .cards-box p:hover {
     background: rgba(0, 0, 0, 0.758);
+    cursor: pointer;
 }
 
 .projects-section h2
