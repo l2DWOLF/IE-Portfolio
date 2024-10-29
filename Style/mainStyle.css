@@ -612,7 +612,11 @@ header {
 
 /* <!-- ----Projects Section---------------> */
 .projects-section {
-    background: var(--accent3);
+    background-image: url(/Media/projects-background.jpg);
+    object-fit:contain;
+    background-position: center center;
+    background-blend-mode: multiply;
+        
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -628,7 +632,8 @@ header {
 }
 
 .cards-container {
-    background: var(--accent3);
+
+    background: transparent;
     width: 70%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -638,38 +643,52 @@ header {
 }
 
 .cards-box {
-    background: transparent;
-    min-height: 400px;
+    background: rgba(0, 0, 0, 0.33);
+    object-fit: contain;
+    min-height: 500px;
     padding: 0 0 0 0;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.2em;
-    box-shadow: 0 0 8px black;
-    border-radius: 10px;
+    box-shadow: 0 5px 10px 2px black;
+    border:1px solid rgb(251, 251, 251);
+    border-radius: 1em;
     overflow: hidden;
     transition: .5s;
+    z-index:5;
 }
 
 .cards-box:hover {
-    transform: scale(1.035);
-    background: #8aa6cb;
+    transform: scale(1.05);
+    -webkit-backdrop-filter: blur(2px) !important;
+    backdrop-filter: blur(2px) !important;
 }
 
+.cards-box:hover h4, .cards-box:hover p
+{
+        background: rgba(0, 0, 0, 0.758);
+}
+
+.projects-section h2
+{
+    color:var(--secondary);
+}
 .cards-box h4 {
-    text-align: justify;
+    text-align: center;
     font-size: var(--fs-h4);
-    color: var(--backcolor3);
+    color: snow;
     text-decoration: underline;
     font-weight: 700;
+    width:100%
 }
 
 .cards-box p {
     text-align: center;
     padding: 5px;
     font-size: .88rem;
-    color: var(--backcolor1);
+    color: snow;
     font-weight: 600;
 }
 
@@ -691,7 +710,7 @@ header {
 }
 
 .cards-box img:hover {
-    scale: 1.1;
+    scale: 1.2;
 }
 
 .card-tags {
@@ -721,8 +740,11 @@ header {
 }
 
 .cards-btn {
-    display: inline-block;
+    display:block;
+    position:absolute;
+    bottom:0px;
     margin: 1em 0 1em;
+    bottom: 5px;
     padding: 0.3em 1em;
     background: var(--secondary);
     border: 2px solid var(--secondary);
@@ -733,6 +755,7 @@ header {
     font-weight: 600;
     transition: .5s;
 }
+
 
 .cards-btn:hover {
     background: transparent;
@@ -1171,11 +1194,18 @@ header {
 /* <!-- ----@Media Home Section End----------> */
 
 /* <!-- ----@Media Aside Bar--------------> */
+#aside-item-cpp
+{
+    display: none;
+}
 /* <!-- ----@Media Aside Bar End----------> */
 
 /* <!-- ----@Media Projects Section--------------> */
 .projects-section {
     padding: 25px 25px;
+    background-position: bottom !important;
+
+    background-repeat: repeat-y !important;
 }
 
 .projects-section p {
@@ -1186,6 +1216,11 @@ header {
     gap: 2em !important;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
     width: 100% !important;
+}
+
+.cards-box
+{
+    min-height: 520px;
 }
 /* <!-- ----@Media Projects Section End----------> */
 
@@ -1202,11 +1237,12 @@ header {
 
 /* <!-- ----@Media Contact Section--------------> */
 #contact-section {
-    padding: 25px 25px;
+    padding: 25px 15px;
 }
 
 #contact-section p {
     padding: 0 !important;
+    font-size: .98rem !important;
 }
 
 .form-container {
