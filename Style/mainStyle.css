@@ -657,7 +657,7 @@ header {
     border-radius: 1em;
     overflow: hidden;
     transition: .5s;
-    z-index:5;
+    /* z-index:5; */
 }
 
 .cards-box:hover {
