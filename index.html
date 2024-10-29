@@ -208,15 +208,15 @@
                 <div class="contact-box">
                     <form>
                         <div class="user-box">
-                            <input id="userName" type="text" name="name" required placeholder=" " pattern="([a-zA-Z]{3,25}) ([a-zA-Z]{3,25}|\.| |-|')+$" title="4-25 Chars, Letters only." autocomplete="on">
+                            <input id="userName" type="text" name="name" required placeholder=" " pattern="([a-zA-Z]{3,30}) ([a-zA-Z]{3,25}|\.| |-|')+$" title="Must Contain: First and Last Name, 3-30 letters only | Example: John Dough |" autocomplete="on">
                             <label for="userName">Full Name</label>
                         </div>
                         <div class="user-box">
-                            <input id="userEmail" required type="email" name="email" placeholder=" " pattern="[a-zA-Z0-9 \+ \- \.]+@([a-z]+\.)+[a-zA-Z]{2,8}" title="Example: Person@Company.com" autocomplete="on">
+                            <input id="userEmail" required type="email" name="email" placeholder=" " pattern="[a-zA-Z0-9 \+ \- \.]+@([a-z]+\.)+[a-zA-Z]{2,8}" title="Must be a valid email | Example: Person@Company.com |" autocomplete="on">
                             <label for="userEmail">Email</label>
                         </div>
                         <div class="user-box">
-                            <input id="userPhone" required type="text" name="phone" placeholder=" " inputmode="numeric" pattern="[0-9]{9,14}" title="Example: 3477549099" autocomplete="on">
+                            <input id="userPhone" required type="text" name="phone" placeholder=" " inputmode="numeric" pattern="[0-9]{9,14}" title="Must Contain 9 - 15 Numbers | Example: 3477549099 |" autocomplete="on">
                             <label for="userPhone">Phone</label>
                         </div>
                         <div class="user-box">
