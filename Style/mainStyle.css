@@ -681,7 +681,6 @@ header {
 .cards-info:hover
 {
     background: rgba(0, 0, 0, 0.758);
-    cursor:pointer;
 }
 .projects-section h2
 {
@@ -693,7 +692,8 @@ header {
     color: snow;
     text-decoration: underline;
     font-weight: 700;
-    width:100%
+    width:100%;
+    cursor: pointer;
 }
 
 .cards-box p {
@@ -702,6 +702,7 @@ header {
     font-size: .88rem;
     color: snow;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .cards-img-box {
