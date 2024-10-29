@@ -666,7 +666,7 @@ header {
     backdrop-filter: blur(2px) !important;
 }
 
-.cards-box:hover h4, .cards-box:hover p
+.cards-box h4:hover, .cards-box p:hover
 {
         background: rgba(0, 0, 0, 0.758);
 }
@@ -1214,6 +1214,10 @@ header {
     background-repeat: repeat-y !important;
 }
 
+.projects-section h2
+{
+    margin-bottom: 1em;
+}
 .projects-section p {
     font-size: var(--fs-p);
 }
