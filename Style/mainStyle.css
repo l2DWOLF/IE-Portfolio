@@ -658,7 +658,6 @@ header {
     overflow: hidden;
     transition: .5s;
     cursor:pointer;
-    /* z-index:5; */
 }
 
 .cards-box:hover {
@@ -685,7 +684,6 @@ header {
     font-weight: 700;
     width:100%;
     cursor: pointer;
-    z-index: 2;
 }
 
 .cards-box p {
@@ -695,7 +693,6 @@ header {
     color: snow;
     font-weight: 600;
     cursor: pointer;
-    z-index: 2;
 }
 
 .cards-img-box {
@@ -1213,7 +1210,7 @@ header {
     background-repeat: repeat-y;
     background-size: 900px 1000px;
         
-    padding: 4em 20px 6em;
+    padding: 4em 20px 7em;
     background-position: bottom !important;
     background-repeat: repeat-y !important;
 }
