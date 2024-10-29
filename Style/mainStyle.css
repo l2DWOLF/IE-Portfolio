@@ -754,20 +754,22 @@ header {
     margin: 1em 0 1em;
     bottom: 5px;
     padding: 0.3em 1em;
-    background: var(--secondary);
+    background: transparent;
     border: 2px solid var(--secondary);
     border-radius: 40px;
     box-shadow: 0 0 10px var(--secondary);
     font-size: var(--fs-btn-cards);
-    color: var(--backcolor1);
+    color: var(--secondary);
     font-weight: 600;
     transition: .5s;
 }
 
 .cards-btn:hover {
     background: transparent;
-    color: var(--secondary);
-    box-shadow: 0 0 5px var(--secondary);
+    background: var(--secondary);
+    color: var(--backcolor1);
+    border: 2px solid var(--backcolor1);
+    box-shadow: 0 0 8px var(--secondary);
     transform: scale(1.1) translateY(-5%);
 }
 /* <!-- ----End Project Section----------> */
@@ -804,9 +806,10 @@ header {
 .about-header
 {
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: .2em;
 }
 
 #about-section h2 {
