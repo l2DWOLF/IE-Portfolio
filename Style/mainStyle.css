@@ -666,11 +666,11 @@ header {
     backdrop-filter: blur(2px) !important;
 }
 
-.cards-box:hover h4
+.cards-box:hover~h4
 {
         background: rgba(0, 0, 0, 0.758);
 }
-.cards-box:hover p
+.cards-box:hover~p
 {
         background: rgba(0, 0, 0, 0.758);
 }
