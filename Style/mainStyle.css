@@ -668,14 +668,8 @@ header {
     cursor: pointer;
 }
 
-.cards-box:hover h4 {
+.cards-box:hover h4, .cards-box:hover p {
     background: rgba(0, 0, 0, 0.758);
-    cursor: pointer;
-}
-
-.cards-box:hover p {
-    background: rgba(0, 0, 0, 0.758);
-    cursor: pointer;
 }
 
 .cards-info:hover
