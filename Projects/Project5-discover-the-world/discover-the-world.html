@@ -63,16 +63,16 @@
                         <div class="message-box">
                             <form>
                                 <div class="user-box">
-                                    <label for="name">Full Name</label>
+                                    <label for="Username">Full Name</label>
                                     <br>
                                     <input id="userName" type="text" name="name" required placeholder=" "
-                                        pattern="([a-zA-Z]{3,25}) ([a-zA-Z]{3,25}|\.| |-|')+$" title="4-25 Chars, Letters only.">
+                                    pattern="([a-zA-Z]{3,30}) ([a-zA-Z]{3,25}|\.| |-|')+$"
+                                    title="Must Contain: First and Last Name, 3-30 letters only | Example: John Dough |" autocomplete="on">
                                 </div>
                                 <div class="user-box">
-                                    <label for="email">Email</label>
+                                    <label for="userEmail">Email</label>
                                     <br>
-                                    <input id="userEmail" required type="email" name="email" placeholder=" "
-                                        pattern="[a-zA-Z0-9 \+ \- \.]+@([a-z]+\.)+[a-zA-Z]{2,8}" title="Example: Person@Company.com">
+                                    <input id="userEmail" required type="email" name="email" placeholder=" " pattern="[a-zA-Z0-9 \+ \- \.]+@([a-z]+\.)+[a-zA-Z]{2,8}" title="Must be a valid email | Example: Person@Company.com |" autocomplete="on">
                                 </div>
                                 <div class="user-box">
                                     <label for="message" class="msg-label">Your Experience</label>
@@ -80,7 +80,7 @@
                                     <input id="userMessage" type="text" name="message" placeholder=" "
                                         pattern="[a-zA-Z0-9 \! \. \, \- \= \@ \# \: \; \+]{2,250}" title="250 Max Characters.">
                                 </div>
-                                <button class="form-btn">Submit</button>
+                                <button type="submit" class="form-btn">Submit</button>
                             </form>
                         </div>
                     </div>

@@ -27,6 +27,7 @@ main
 {
     display: flex;
     flex-direction: column;
+    padding-bottom: 1em;
 }
 
 img 
@@ -55,7 +56,7 @@ img
     right:15.5%;
     
     width: 30.5em;
-    height: 110%;
+    min-height: 450px;
     position: absolute;
 
     display: flex;
@@ -126,7 +127,7 @@ img
         top: 40%;
         right:unset;
         width: 80%;
-        min-height: 100% !important;
+        max-height: 500px !important;
         padding:1em;
         padding-top: 2em;
         padding-bottom: 28em;

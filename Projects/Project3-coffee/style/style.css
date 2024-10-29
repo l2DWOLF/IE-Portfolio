@@ -17,7 +17,7 @@
 
 .container {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 5px);
 }
 
 .container-img {
@@ -39,7 +39,7 @@
   flex-grow: 1;
   direction: rtl;
   border: 1px solid #707070;
-  max-height: 100vh;
+  max-height: 100%;
 
   overflow: scroll;
 }

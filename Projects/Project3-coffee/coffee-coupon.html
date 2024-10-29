@@ -27,12 +27,12 @@
 
           <div class="form-control">
             <label for="name">שם מלא</label>
-            <input id="name" type="name" required />
+            <input id="name" type="text" name="name" required placeholder=" " pattern="([a-zA-Z]{3,30}) ([a-zA-Z]{3,25}|\.| |-|')+$" title="Must Contain: First and Last Name, 3-30 letters only | Example: John Dough |" autocomplete="on">
           </div>
 
           <div class="form-control">
             <label for="email">דוא״ל</label>
-            <input id="email" type="email" required />
+            <input id="email" required type="email" name="email" placeholder=" " pattern="[a-zA-Z0-9 \+ \- \.]+@([a-z]+\.)+[a-zA-Z]{2,8}" title="Must be a valid email | Example: Person@Company.com |" autocomplete="on">
           </div>
 
           <button type="submit">שליחה</button>
