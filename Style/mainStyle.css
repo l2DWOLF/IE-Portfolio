@@ -668,13 +668,13 @@ header {
 }
 
 .cards-box:hover h4, .cards-box:hover p {
-    background: rgba(0, 0, 0, 0.758);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 
 .projects-section h2
 {
-    color:var(--secondary);
+    color:snow;
     background:#00000050; 
     width: 104%;
     text-align: center;
