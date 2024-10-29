@@ -657,6 +657,7 @@ header {
     border-radius: 1em;
     overflow: hidden;
     transition: .5s;
+    cursor:pointer;
     /* z-index:5; */
 }
 
@@ -667,7 +668,7 @@ header {
     cursor: pointer;
 }
 
-.cards-box h4:hover {
+/* .cards-box h4:hover {
     background: rgba(0, 0, 0, 0.758);
     cursor: pointer;
 }
@@ -675,8 +676,13 @@ header {
 .cards-box p:hover {
     background: rgba(0, 0, 0, 0.758);
     cursor: pointer;
-}
+} */
 
+.cards-info:hover
+{
+    background: rgba(0, 0, 0, 0.758);
+    cursor:pointer;
+}
 .projects-section h2
 {
     color:var(--secondary);
