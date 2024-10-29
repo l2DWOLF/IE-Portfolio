@@ -666,7 +666,11 @@ header {
     backdrop-filter: blur(2px) !important;
 }
 
-.cards-box h4:hover, .cards-box p:hover
+.cards-box:hover h4
+{
+        background: rgba(0, 0, 0, 0.758);
+}
+.cards-box:hover p
 {
         background: rgba(0, 0, 0, 0.758);
 }
@@ -756,14 +760,12 @@ header {
     transition: .5s;
 }
 
-
 .cards-btn:hover {
     background: transparent;
     color: var(--secondary);
     box-shadow: 0 0 5px var(--secondary);
     transform: scale(1.1) translateY(-5%);
 }
-
 /* <!-- ----End Project Section----------> */
 
 /* <!-- ----About Section----------------> */
