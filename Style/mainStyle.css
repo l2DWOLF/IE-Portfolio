@@ -674,6 +674,14 @@ header {
 {
         background: rgba(0, 0, 0, 0.758);
 }
+.cards-box h4:hover
+{
+        background: rgba(0, 0, 0, 0.758);
+}
+.cards-box p:hover
+{
+        background: rgba(0, 0, 0, 0.758);
+}
 
 .projects-section h2
 {
