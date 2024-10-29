@@ -622,7 +622,7 @@ header {
     justify-items: center;
     align-items: center;
     width: 100%;
-    padding: 50px 25px 50px 25px;
+    padding: 75px 25px 10em 25px;
     overflow: hidden;
 }
 
@@ -1209,7 +1209,7 @@ header {
     background-repeat: repeat-y;
     background-size: 600px 1000px;
         
-    padding: 30px 20px;
+    padding: 4em 20px 6em;
     background-position: bottom !important;
     background-repeat: repeat-y !important;
 }
