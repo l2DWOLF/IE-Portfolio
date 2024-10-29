@@ -668,20 +668,21 @@ header {
     cursor: pointer;
 }
 
-/* .cards-box h4:hover {
+.cards-box:hover h4 {
     background: rgba(0, 0, 0, 0.758);
     cursor: pointer;
 }
 
-.cards-box p:hover {
+.cards-box:hover p {
     background: rgba(0, 0, 0, 0.758);
     cursor: pointer;
-} */
+}
 
 .cards-info:hover
 {
     background: rgba(0, 0, 0, 0.758);
 }
+
 .projects-section h2
 {
     color:var(--secondary);
