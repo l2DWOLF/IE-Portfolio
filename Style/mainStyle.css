@@ -689,6 +689,7 @@ header {
     font-weight: 700;
     width:100%;
     cursor: pointer;
+    z-index: 2;
 }
 
 .cards-box p {
@@ -698,6 +699,7 @@ header {
     color: snow;
     font-weight: 600;
     cursor: pointer;
+    z-index: 2;
 }
 
 .cards-img-box {
