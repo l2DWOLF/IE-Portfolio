@@ -631,7 +631,7 @@ header {
     background: var(--accent3);
     width: 70%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(233px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-content: center;
     gap: 20px;
     padding: 20px;
@@ -639,13 +639,13 @@ header {
 
 .cards-box {
     background: transparent;
-    min-height: 450px;
-    padding: 0;
+    min-height: 100%;
+    padding: 0 0 0 0;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.6em;
+    gap: 0.2em;
     box-shadow: 0 0 8px black;
     border-radius: 10px;
     overflow: hidden;
@@ -722,7 +722,7 @@ header {
 
 .cards-btn {
     display: inline-block;
-    margin-top: 0.5em;
+    margin: 1em 0 1em;
     padding: 0.3em 1em;
     background: var(--secondary);
     border: 2px solid var(--secondary);
