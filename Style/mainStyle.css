@@ -615,7 +615,7 @@ header {
 
 /* <!-- ----Projects Section---------------> */
 .projects-section {
-    background-image: url(/Media/projects-background.jpg);
+    background-image: url(/IE-Portfolio/Media/projects-background.jpg);
     object-fit: contain;
     background-position: center center;
     background-blend-mode: multiply;
