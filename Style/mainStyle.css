@@ -1288,9 +1288,8 @@ header {
 
     .cards-container {
         gap: 2em !important;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 85%)) !important;
         width: 90% !important;
-
     }
 
     .cards-box {
