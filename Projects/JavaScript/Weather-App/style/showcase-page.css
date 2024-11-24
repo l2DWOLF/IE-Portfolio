@@ -776,7 +776,9 @@
 }
 
 .projects-section {
+    margin-top: 2em;
     padding: 2.5em 0 2.5em 0;
+    width: 70%;
 }
 
 .projects-section iframe {
