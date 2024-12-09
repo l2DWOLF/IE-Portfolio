@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: omFont;
-    src: url(/Media/Fonts/planetxcompact3d.ttf);
+    src: url('Media/Fonts/planetxcompact3d.ttf');
 }
 
 * {
@@ -52,7 +52,7 @@ html {
 
 body {
     background: var(--backcolor1);
-    background-image: url('/Media/star-that-is-sky.jpg');
+    background-image: url('Media/star-that-is-sky.jpg');
     background-size: contain;
     margin-top: 75px;
     text-rendering: optimizeSpeed;
