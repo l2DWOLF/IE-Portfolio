@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: omFont;
-    src: url('/IE-Portfolio/Projects/PlanetOM/Media/Fonts/planetxcompact3d.ttf');
+    src: url(/IE-Portfolio/Projects/PlanetOM/Media/Fonts/planetxcompact3d.ttf);
 }
 
 * {
@@ -52,7 +52,7 @@ html {
 
 body {
     background: var(--backcolor1);
-    background-image: url('/IE-Portfolio/Projects/PlanetOM/Media/star-that-is-sky.jpg');
+    background-image: url(/IE-Portfolio/Projects/PlanetOM/Media/star-that-is-sky.jpg);
     background-size: contain;
     margin-top: 75px;
     text-rendering: optimizeSpeed;
@@ -656,7 +656,7 @@ header {
 
 /* <!-- ----Projects Section---------------> */
 .projects-section {
-    background-image: url(/IE-Portfolio/Media/projects-background.jpg);
+    /* background-image: url(/IE-Portfolio/Media/projects-background.jpg); */
     object-fit: contain;
     background-position: center center;
     background-blend-mode: multiply;
@@ -1313,7 +1313,7 @@ header {
     /* <!-- ----@Media Projects Section--------------> */
     .projects-section {
 
-        background-image: url(/IE-Portfolio/Media/projects-background.jpg);
+        /* background-image: url(/IE-Portfolio/Media/projects-background.jpg); */
         object-fit: cover !important;
         background-blend-mode: multiply;
         background-repeat: repeat-y;
