@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/mainStyle.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="/script/script.js" defer></script>
 
     <title>PlanetOM </title>
 </head>
 
 <body>
+    <img src="/Media/star-that-is-sky.jpg" id="bgimage" alt="">
     <!-- --------------Header Start-------------- -->
     <header>
         <nav class="nav-bar">
@@ -79,35 +81,24 @@
                     Middle Eastern-psychedelic influences, in collaboration with other musicians on the Jerusalem-Tel
                     Aviv axis.
                 </p>
-
-                <div class="social-icons"> <!-- --Social Icons-- -->
-                    <div class="social-icons-box">
-                        <a href="https://www.facebook.com/PlanetOmMusic?mibextid=LQQJ4d" target="_blank"><i
-                                class='bx bxl-facebook-circle'></i></a>
-                        <a href="https://www.linkedin.com/in/idan-elimeleh-itegroupnyc" target="_blank"><i
-                                class='bx bxl-linkedin-square'></i></a>
-                        <a href="https://www.instagram.com/idan.elimeleh/" target="_blank"><i
-                                class='bx bxl-instagram'></i></a>
-                    </div>
-                </div>
             </div>
 
-            <h3 class="typing-text">
+            <h3 class="typing-text" id="hmm">
                 <span></span>
             </h3>
         </section>
         <!-- --------------Home Section End-------------- -->
 
         <!-- ------------------Aside Bar----------------- -->
-        <aside id="aside-bar">
+        <aside id="aside-bar" onclick="return true">
             <div class="aside-box">
-                <div class="aside-item"><a><i class='bx bxl-youtube'></i><span>YouTube</span></a></div>
-                <div class="aside-item"><a><i class='bx bxl-spotify'></i><span>Spotify</span></a></div>
-                <div class="aside-item"><a><i class='bx bx-music'></i><span>Bandcamp</span></a></div>
-                <div class="aside-item"><a><i class='bx bxl-apple'></i><span>Apple Music</span></a></div>
-                <div class="aside-item"><a><i class='bx bxl-amazon'></i><span>Amazon Music</span></a></div>
-                <div class="aside-item"><a><i class='bx bxl-audible'></i><span>HyperFollow</span></a></div>
-                <div class="aside-item"><a><i class='bx bxl-instagram-alt'></i><span>Instagram</span></a></div>
+                <div class="aside-item"><a href="https://www.youtube.com/@planetommusic8847" target="_blank"><i class='bx bxl-youtube'></i><span>YouTube</span></a></div>
+
+                <div class="aside-item"><a href="https://open.spotify.com/artist/3M9OpKkHz15JKmKMZVesuI" target="_blank"><i class='bx bxl-spotify'></i><span>Spotify</span></a></div>
+                
+                <div class="aside-item"><a href="https://music.apple.com/us/artist/planet-om/1545521793" target="_blank"><i class='bx bxl-apple'></i><span>Apple Music</span></a></div>
+                
+                <div class="aside-item"><a href="https://www.amazon.com/music/player/artists/B08QZ2SYCV/planet-om"><i class='bx bxl-amazon'></i><span>Amazon Music</span></a></div>
             </div>
         </aside>
         <!-- ------------------Aside Bar End------------- -->
@@ -119,14 +110,19 @@
             </div>
 
             <div class="cards-container"><!-- --Cards Container-- -->
-                <!-- --JavaScript Card 1-- -->
-                <div class="cards-box" onclick="return true">
+                <!-- --Struggle EP Release Card- -->
+                <div class="cards-box" onclick="return true" id="struggle-card">
                     <h3>Struggle</h3>
 
                     <div class="cards-img-box">
-                        <img src="Media/stgle.png" alt="Struggle EP">
+                        
+                            <iframe width="600" height="600" src="https://www.youtube.com/embed/zytKlv0fEOo" title="Planet Om - Yin Yang dance"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
                     </div>
-                    <div class="card-tags">| EP Release |</div>
+                    <div class="card-tags"> EP Release </div>
 
                     <p>
                         At Last…STRUGGLE – the new EP is out today!
@@ -138,18 +134,58 @@
                         Credits Released January 1, 2021.
                         <br><br>
                         <br>
-                        [00:00 – 03:41] Planet Om – STRUGGLE: 01 Yin-Yang dance
+                        [00:00 – 03:41] <br>
+                        Planet Om – STRUGGLE: 01 Yin-Yang dance
                         <br>
-                        [03:41 – 09:01] Planet Om – STRUGGLE: 02 Purple alarm
+                        [03:41 – 09:01] <br>
+                        Planet Om – STRUGGLE: 02 Purple alarm
                         <br>
-                        [09:01 – 12:45] Planet Om – STRUGGLE: 03 Happy 7
+                        [09:01 – 12:45] <br>
+                        Planet Om – STRUGGLE: 03 Happy 7
                         <br>
-                        [12:45 – 15:10] Planet Om – STRUGGLE: 04 Symbiosis
+                        [12:45 – 15:10] <br>
+                        Planet Om – STRUGGLE: 04 Symbiosis
                     </p>
-                    <a href="Projects/JavaScript/Weather-App/showcase-page.html" class="cards-btn"
-                        alt="View & Download Project">Listen on your Favorite Platform</a>
+                    <a href="https://distrokid.com/hyperfollow/planetom/struggle" class="cards-btn" target="_blank"  alt="Listen on your Favorite Platform">Listen on your Favorite Platform</a>
                 </div>
-                <!-- --Card 1-- -->
+                <!-- --End Struggle EP Release Card-- -->
+
+                <!-- --Autot Coming Soon Card- -->
+                <div class="cards-box" onclick="return true" id="autot-card">
+                    <h3>Coming Soon!
+                        <br>
+                        <span>AUTOT</span>
+                    </h3>
+                    
+                    <div class="cards-img-box">
+                            <img src="Media/AutotCover.jpg" alt="Autot Album Cover">
+                    </div>
+
+                    <div class="card-tags"> Coming Soon! 01.01.2025 </div>
+
+                    <p>
+                        Coming Soon! | AUTOT
+                        <br><br>
+                        Full Album Release - 01.01.2025
+                        <br><br>
+                        The music was inspired by the painting and the periodic struggle in which we find ourselves.
+                        <br><br>
+                        <br>
+                        [00:00 – 03:41] <br>
+                        AUTOT: 01 Yin-Yang dance.
+                        <br>
+                        [03:41 – 09:01] <br>
+                        AUTOT: 02 Purple alarm.
+                        <br>
+                        [09:01 – 12:45] <br>
+                        AUTOT: 03 Happy 7.
+                        <br>
+                        [12:45 – 15:10] <br>
+                        AUTOT: 04 Symbiosis.
+                    </p>
+                    <a href="https://distrokid.com/hyperfollow/planetom/autot" class="cards-btn" target="_blank" alt="Listen on your Favorite Platform">Listen on your Favorite Platform</a>
+                </div>
+                <!-- --End Struggle EP Release Card-- -->
 
                 <!----End Project Cards---->
             </div>
@@ -168,16 +204,14 @@
                 Led by Israeli keyboardist and producer Gidi Cohen,
 
                 The Planet Om project offers a cinematic journey through a world where electronic music intertwines with
-                global
-                influences.
+                global influences.
 
                 This fusion creates grand, harmonious landscapes intended to transport listeners to otherworldly realms.
 
                 Each track is a vibrant exploration of sound, offering a unique sonic adventure.
 
                 Om, the sound of creation, embraces a wide variety of styles, whether you’re looking to unwind, dance,
-                or explore new
-                musical horizons.
+                or explore new musical horizons.
             </p>
         </section>
         <!-- --------------About Section End-------------- -->
@@ -221,14 +255,14 @@
                 <div class="social-icons-box">
                     <a href="https://www.facebook.com/PlanetOmMusic?mibextid=LQQJ4d" target="_blank"><i
                             class='bx bxl-facebook-circle'></i></a>
-                    <a href="https://www.linkedin.com/in/idan-elimeleh-itegroupnyc" target="_blank"><i
-                            class='bx bxl-linkedin-square'></i></a>
-                    <a href="https://www.instagram.com/idan.elimeleh/" target="_blank"><i
+                    <a href="https://planetom.bandcamp.com/album/struggle" target="_blank"><i class='bx bx-music'></i></a>
+                    <a href="https://www.instagram.com/planetommusic" target="_blank"><i
                             class='bx bxl-instagram'></i></a>
+                    <a href="mailto:PlanetOmPro@Gmail.com" target="_blank"><i class='bx bx-envelope'></i></a>
                 </div>
             </div>
             <p>
-                Booking: PlanetOmPro@gmail.com
+                <!-- Booking: PlanetOmPro@gmail.com -->
             </p>
 
         </section>
