@@ -6,6 +6,7 @@
     src: url(/IE-Portfolio/Projects/PlanetOM/Media/Fonts/planetxcompact3d.ttf);
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -159,8 +160,8 @@ header {
 
 .nav-bar {
     font-family: 'omFont', sans-serif;
-    background: black;
-    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.658);
+    background: rgb(0, 0, 0);
+    box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.658);
     position: fixed;
     width: 100%;
     height: 75px;
@@ -643,9 +644,51 @@ header {
     transform: scale(1.1) translateY(-5%) !important;
 }
 
+.youtube a:hover {
+    color: red !important;
+    border: 1px solid red !important;
+}
+
+.spotify a:hover {
+    color: green !important;
+    border: 4px solid green !important;
+}
+
+.tidal {
+    width: 1rem;
+    
+    margin: 2em;
+}
+
+.tidal a:hover {
+    border: 2px solid black;
+    color: black;
+}
+
+.tidal img {
+    color: #00fbff !important;
+    filter: invert(95%) sepia(37%) saturate(5990%) hue-rotate(169deg) brightness(105%) contrast(103%);
+    
+}
+
+.tidal a:hover img {
+    filter: invert(0%) sepia(0%) saturate(7456%) hue-rotate(204deg) brightness(109%) contrast(96%);
+}
+
+.apple a:hover {
+    color: rgb(105, 105, 105) !important;
+    border: 4px solid silver !important;
+}
+
+.amazon a:hover{
+    border: 2px solid black;
+}
+
 .aside-item i {
     animation: inner-spinner 6s linear infinite;
     transition: .5s;
+    padding: 0;
+    height: 50px;
 }
 
 @keyframes spinner {
@@ -712,7 +755,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5em;
+    gap: 2em;
     padding: 5em 0 200px;
     height: 100%;
 }
@@ -720,7 +763,7 @@ header {
 .cards-box {
     background: rgba(0, 0, 0, 0.2);
     object-fit: contain;
-    min-height: 1100px;
+    /* min-height: 1100px; */
     width: 93vw;
     padding: 0 0 0 0;
     position: relative;
@@ -738,8 +781,8 @@ header {
 
 .cards-box:hover {
     transform: scale(1.03);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
     border-radius: 3% 3%;
 }
 
@@ -795,6 +838,8 @@ header {
     color: snow;
     font-weight: 600;
     width: 100%;
+
+    margin-bottom: 5em;
 }
 
 .cards-img-box {
@@ -959,7 +1004,7 @@ header {
 
 #contact-section h2 {
     font-size: var(--fs-h2);
-    color: var(--accent2);
+    color: #7974b6;
 }
 
 #contact-section p {
@@ -1364,6 +1409,10 @@ header {
         display: none;
     }
 
+    .aside-item a {
+        font-size: 2.75rem;
+    }
+
     /* <!-- ----@Media Aside Bar End----------> */
 
     /* <!-- ----@Media Projects Section--------------> */
@@ -1434,9 +1483,9 @@ header {
         min-height:unset;
         height: 300px !important;
     }
-    #autot-card {
+   /*  #autot-card {
         height: 1100px !important;
-    }
+    } */
     /* <!-- ----@Media Projects Section End----------> */
 
     /* <!-- ----@Media About Section--------------> */
