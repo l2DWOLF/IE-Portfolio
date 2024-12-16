@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: omFont;
-    src: url(/Media/Fonts/planetxcompact3d.ttf);
-    /* src: url(/IE-Portfolio/Projects/PlanetOM/Media/Fonts/planetxcompact3d.ttf); */
+    /* src: url(/Media/Fonts/planetxcompact3d.ttf); */
+    src: url(/IE-Portfolio/Projects/PlanetOM/Media/Fonts/planetxcompact3d.ttf);
 }
 
 
@@ -31,7 +31,7 @@
 
     --fs-h1: 3rem;
     --fs-h1-span: 6rem;
-    --fs-h2: 5rem;
+    --fs-h2: 3.5rem;
     --fs-h3: 2rem;
     --fs-h4: 1.4rem;
     --fs-h5: 0.9rem;
@@ -802,7 +802,7 @@ header {
 }
 
 .projects-section h2 {
-    font-size: var(--fs-h2);
+    font-size: 2.5rem !important;
     color: snow;
     background: #00000025;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.80);
@@ -1019,7 +1019,7 @@ header {
 }
 
 .form-container {
-    width: 50%;
+    width: 40%;
     height: 400px;
     position: relative;
 }
@@ -1032,22 +1032,32 @@ header {
     height: 100%;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background: var(--backcolor1);
+    background: rgba(135, 207, 235, 0.088);
     box-sizing: border-box;
     box-shadow: 0px 0px 15px 2px #afc0ff50;
     border-radius: 10px;
 }
 
 .form-container {
-    height: 450px
+    height: 300px;
 }
+
 
 .contact-box form {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    align-items: center;
+    gap: 1em;
 }
 
 .contact-box .user-box {
     position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
 .contact-box .user-box input {
@@ -1064,7 +1074,7 @@ header {
 }
 
 #userEmail {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 #userMessage {
@@ -1139,8 +1149,9 @@ header {
     color: #00fbff;
     font-weight: 600;
     width: 45%;
-    align-self: center;
-    justify-self: center;
+    grid-column:span 2;
+    text-align: center;
+    justify-self: center !important;
     transition: .5s;
 }
 
