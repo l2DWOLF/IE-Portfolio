@@ -1,11 +1,11 @@
-import { TaskManager } from './classes/manager.js';
+import {TaskManager} from './classes/manager.js';
 
 
 
 let tManager = new TaskManager();
 
 
-//-----Drag & Drop Functionality------//  
+//-----Drag & Drop Functionality------// 
 const draggables = document.querySelectorAll(".task");
 const droppables = document.querySelectorAll(".swim-lane");
 
