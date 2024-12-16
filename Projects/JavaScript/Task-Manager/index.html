@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script type="module" src="js/app.js" defer></script>
+    <script type="module" src="./js/app.js" defer></script>
+    
+  <!--   <script src="js/drag.js" defer></script> -->
+
+    <title>Modules</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <h1>Task Manager</h1>
+        <h2>Create Tasks, To-do lists, Grocery, Etc.</h2>
+
+        <div class="board">
+            
+            <div class="form-wrapper">
+                <form action="" id="tasks-form">
+                    <input type="text" placeholder="Create New Item" id="task-input" autofocus>
+                    <button type="submit">Add Item</button>
+                </form>
+            </div>
+
+            <div class="task-lanes">
+                <div class="swim-lane" id="todo-lane">
+                    <h3>To Do:</h3>
+
+                </div>
+                <div class="swim-lane" id="progress-lane">
+                    <h3>In Progress:</h3>
+                    
+                </div>
+                <div class="swim-lane" id="completed-lane">
+                    <h3>COMPLETED!</h3>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
