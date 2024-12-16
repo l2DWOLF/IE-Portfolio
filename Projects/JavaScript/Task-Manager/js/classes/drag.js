@@ -1,5 +1,3 @@
-
-
 //-----Drag & Drop Functionality------// 
 const draggables = document.querySelectorAll(".task");
 const droppables = document.querySelectorAll(".swim-lane");

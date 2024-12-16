@@ -14,9 +14,8 @@ class TaskManager
         this.progressLane = document.getElementById("progress-lane");
         this.completedLane = document.getElementById("completed-lane");
         
-        
         this.loadFiles();
-        
+
         // Add Task Btn // 
         form.addEventListener("submit", (e) => {
             e.preventDefault();
@@ -26,6 +25,14 @@ class TaskManager
             this.addTask(value);
             input.value = "";
         });
+        // Add Task Btn //
+
+        // Delete All Btn // 
+        this.deleteAllBtn = document.getElementById("deleteAll");
+
+        this.deleteAllBtn.addEventListener("click", (e) => {
+            this.deleteAll();
+        })
     }
     //Add Task//
     addTask(title, status)
@@ -54,11 +61,11 @@ class TaskManager
             const taskTitle = task.title.innerText;
 
             if (this.todoLane.contains(task.taskCard))
-            {task.status = "To Do Lane";}
+            {task.status = "To Do";}
             else if (this.progressLane.contains(task.taskCard))
-            { task.status = "In Progress Lane";}
+            { task.status = "In Progress";}
             else if (this.completedLane.contains(task.taskCard))
-            { task.status = "Completed Lane";}
+            { task.status = "Completed";}
 
             const taskStatus = task.status;
             storedList.push({taskTitle, taskStatus});
@@ -82,5 +89,17 @@ class TaskManager
         this.taskList = this.taskList.filter((task) => task.id !== id);
         this.saveTasks();
     };
+    deleteAll()
+    {   
+        if (window.confirm("Delete All?"))
+        {
+            this.taskList.forEach((task) => {
+                this.deleteTask(task.id);
+            });
+            localStorage.clear("List");
+            this.loadFiles();
+        }
+        
+    }
 };
 export{TaskManager};

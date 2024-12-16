@@ -39,38 +39,52 @@
  }
 
  body {
-    background-image: url("/media/peter-olexa-RYtiT3b7XW4-unsplash.jpg");
-    background-size: cover;
-    background-repeat: repeat-y;
-    background-color: black;
+    background-color: var(--clr-1);
     background-attachment: fixed;
     width: 100vw;
     height: 100%;
 
      display: flex;
-    /*  background-color: var(--accent3); */
      flex-direction: column;
      justify-content: center;
      align-items: center;
-
      font-size: 1rem;
  }
 
- .wrapper{
-    
-    max-width:100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2em 0;
-    gap: .5em;
+img {
+   width: 100%;
+}
 
-    color: black;
+#bgimage {
+   object-fit: cover;
+   position: fixed;
+   top:0;
+   left:0;
+   background-repeat: repeat-y;
+   background-attachment: scroll;
+   z-index: -1;
+   min-height: 100vh;
+
+   opacity: 0.7;
+   transition: 1s;
+   animation: opaCity 20s linear infinite;
+}
+
+.wrapper{
+   
+   max-width:100vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 2em 0;
+   gap: .5em;
+
+   color: black;
 }
 
 .wrapper h1, .wrapper h2{
-    color: snow;
+    color: paleturquoise;
     text-align: center;
    font-weight: 600;
 }
@@ -80,22 +94,22 @@ select {
 }
 .wrapper h2
 {
-    font-size: 1rem;
+   font-size: 1rem;
    font-weight: 300;
 }
 
 h3
 {
-    font-weight: 800;
+   font-weight: 800;
 }
 
 button{
-    background-color: #21022f25;
-    box-shadow: 0 2px 5px black;
-   
-    border-radius: 5px;
-    font-size: .85rem !important;
-    transition: .5s;
+   background-color: #21022f25;
+   box-shadow: 0 2px 5px black;
+
+   border-radius: 5px;
+   font-size: .85rem !important;
+   transition: .5s;
 }
 
 button:hover {
@@ -104,8 +118,16 @@ button:hover {
     border: 1px solid snow;
 }
 
+#deleteAll {
+   position: absolute;
+   top: 5px; 
+   right: 5px;
+}
+
  .board
- {
+ { 
+    margin-bottom: 3em;
+    position:relative;
     width: 100%;
     min-height: 100%;
     padding: 2em;
@@ -125,6 +147,10 @@ button:hover {
    background: #6c7e99a3
  }
 
+ .board p {
+   text-align: center;
+   margin-top: 1.5em;
+ }
  .task-lanes
  {
     display: flex;
@@ -161,6 +187,7 @@ button:hover {
  #completed-lane p 
  {
     text-decoration: line-through;
+    color: greenyellow;
  }
 
  .task
@@ -226,12 +253,15 @@ button:hover {
  }
  #tasks-form
  {
+   margin-top: 1em;
     padding: .8em;
     width: 100%;
     display: flex;
     gap: .5em;
     border-bottom:2px solid #67717e
  }
+
+ 
 
  #tasks-form input
  {

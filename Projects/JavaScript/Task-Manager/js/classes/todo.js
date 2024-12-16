@@ -13,7 +13,7 @@ class Task
     this.status = null;
     
     if(status == null)
-    {this.status = "To Do Lane";}
+    {this.status = "To Do";}
     else
     {this.status = status;}
     
@@ -80,7 +80,7 @@ class Task
     editTask()
     {   //Object performs self edit
         let input = document.createElement("input");
-        input.style = "font-size: 1rem;"
+        input.style = "font-size: 1rem; width: 100%;"
 
         let confirmEdit = document.createElement("button");
         confirmEdit.classList.add("edit-btn");
@@ -118,11 +118,11 @@ class Task
         this.selectHolder = document.createElement("option");
         this.selectHolder.innerText = "Select a Lane";
         this.selectTodo = document.createElement("option");
-        this.selectTodo.innerText = "To Do Lane";
+        this.selectTodo.innerText = "To Do";
         this.selectProgress = document.createElement("option");
-        this.selectProgress.innerText = "In Progress Lane";
+        this.selectProgress.innerText = "In Progress";
         this.selectCompleted = document.createElement("option");
-        this.selectCompleted.innerText = "Completed Lane";
+        this.selectCompleted.innerText = "Completed";
         this.selectCancel = document.createElement("option");
         this.selectCancel.innerText = "Close";
         this.selectCancel.style = "background: rgba(255, 0, 0, 0.647)";
@@ -149,17 +149,17 @@ class Task
     }
     moveIt(newLane) 
     {
-        if (newLane == "To Do Lane") {
+        if (newLane == "To Do") {
             this.manager.todoLane.appendChild(this.taskCard);
             this.status = newLane;
             this.manager.saveTasks();
         }
-        else if (newLane == "In Progress Lane") {
+        else if (newLane == "In Progress") {
             this.manager.progressLane.appendChild(this.taskCard);
             this.status = newLane;
             this.manager.saveTasks();
         }
-        else if (newLane == "Completed Lane") {
+        else if (newLane == "Completed") {
             this.manager.completedLane.appendChild(this.taskCard);
             this.status = newLane;
             this.manager.saveTasks();

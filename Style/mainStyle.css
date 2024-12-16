@@ -635,9 +635,9 @@ header {
 .cards-container {
 
     background: transparent;
-    width: 70%;
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
     justify-content: center;
     gap: 20px;
     padding: 5em 0 200px;
@@ -647,7 +647,7 @@ header {
 .cards-box {
     background: rgba(0, 0, 0, 0.2);
     object-fit: contain;
-    min-height: 500px;
+  
     padding: 0 0 0 0;
     position: relative;
     display: flex;
@@ -681,11 +681,11 @@ header {
     top: 75px !important;
     z-index: 1 !important;
     border: 1px solid white;
-    overflow: hidden !important
+    overflow: hidden !important;
 }
 
 .projects-section h2 {
-    font-size: var(--fs-h2);
+    font-size: 3rem;
     color: snow;
     background: #00000025;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.80);
@@ -711,6 +711,7 @@ header {
     font-size: .88rem;
     color: snow;
     font-weight: 600;
+    margin-bottom: 5em;
 }
 
 .cards-img-box {
@@ -733,7 +734,7 @@ header {
 
 .cards-box:hover img,
 .cards-box img:hover {
-    scale: 1.2;
+    scale: 1.04;
 }
 
 .card-tags {
@@ -1028,7 +1029,7 @@ header {
 
 .btn-up a {
     display: inline-flex;
-    font-size: var(--fs-h1);
+    font-size: 3.5rem;
     color: rgb(255, 255, 255);
     transition: 0.5s;
     opacity: 0.3;
@@ -1276,6 +1277,7 @@ header {
         min-width: 100%;
         overflow: hidden;
         border: none;
+       
     }
 
     .projects-section h2 {
@@ -1292,9 +1294,6 @@ header {
         width: 90% !important;
     }
 
-    .cards-box {
-        min-height: 550px;
-    }
 
     /* <!-- ----@Media Projects Section End----------> */
 
