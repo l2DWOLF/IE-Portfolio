@@ -628,6 +628,8 @@ header {
     height: 100%;
     padding: 2em 25px 0 25px;
     position: relative;
+
+    
 }
 
 .cards-container {
@@ -1277,11 +1279,11 @@ header {
         min-width: 100%;
         overflow: hidden;
         border: none;
-       
     }
 
     .projects-section h2 {
         min-width: 100%;
+        font-size: 2rem;
     }
 
     .projects-section p {
@@ -1292,6 +1294,10 @@ header {
         gap: 2em !important;
         grid-template-columns: repeat(auto-fit, minmax(200px, 85%)) !important;
         width: 90% !important;
+    }
+
+    .cards-box {
+        min-height: 600px;
     }
 
 
@@ -1311,6 +1317,8 @@ header {
         padding: 0 !important;
         font-size: var(--fs-p) !important;
     }
+
+
 
     /* <!-- ----@Media About Section End--------------> */
 
