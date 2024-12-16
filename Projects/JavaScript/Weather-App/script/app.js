@@ -25,6 +25,7 @@ async function getWeather(city) {
 function displayWeather(weatherData) {
     if (weatherData.cod === 200) {
         img.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
+        img.classList.add("w-img");
         let tempa = Math.round(weatherData.main.temp); 
         let tempaF = (tempa * 1.8) + 32;
     

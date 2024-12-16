@@ -10,10 +10,17 @@
 body{
     width: 100vw;
     height:100vh;
+
+    background-image: url(/IE-Portfolio/Projects/JavaScript/Weather-App/media/bgi.jpg);
+    
+        background-blend-mode:lighten;
+        background-size: cover;
+        background-position: bottom !important;
+        background-repeat: repeat-y !important;
 }
 .container
 { 
-    background-color: #1f242d;
+    background-color: #eaff000c;
     background-size: cover;
     min-height: 100vh;
     min-width: 100vw;
@@ -24,24 +31,12 @@ body{
     text-transform: capitalize;
 }
 
-#background-video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
 .wrapper
 {
     padding-top: 2em;
     margin-top: 5em;
     margin-bottom: 3em;
-    background: #456083;
+    background: #456083ae;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,7 +56,7 @@ body{
 
 h1
 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #B8F3FF;
 }
 h3
@@ -70,14 +65,14 @@ h3
 }
 .form-control
 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #B8F3FF;
 }
 .form-control input
 {
     height: 2em;
     padding: 1px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     background: #94accb;
     font-weight: bold;
     text-align: center;
@@ -89,7 +84,7 @@ h3
 {
     padding: 0.15em 1.5em;
     background:#B8F3FF;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
     transition: .5s;
     border-radius: 20px;
@@ -106,7 +101,7 @@ h3
 
 #weatherInfo
 {
-    background: #2e4057;
+    background: #2e4057c6;
     display: flex;
     width: 100%;
     height: 90%;
@@ -116,7 +111,7 @@ h3
     padding-bottom: 2em;
 }
 #weatherInfo h1{
-    font-size: 3rem;
+    font-size: 2.25rem;
     text-decoration: none;
 }
 #weatherInfo h2{
@@ -144,6 +139,7 @@ img
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
+    text-align: left;
     gap: .5em;
     color: #94accb;
 }
