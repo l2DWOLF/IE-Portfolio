@@ -66,12 +66,8 @@ const showQuestion = (question) => {
 
     answers.sort(() => Math.random() - 0.5);
     answersWrapper.innerHTML = "";
-    console.log(questions);
-    
-    console.log(answers);
     
     answers.forEach((answer) => {
-        console.log(answer);
         
         answersWrapper.innerHTML += `
             <div class="answer">
@@ -134,16 +130,10 @@ const checkAnswer = () => {
     {
         const answer = selectedAnswer.innerText;
         
-        console.log("QuestionAnswer::: " + questions[currentQuestion-1].correct_answer);
-        console.log("Answer=== " +answer);
-        
-        
         if (answer == questions[currentQuestion -1].correct_answer)
         {
             score++;
             selectedAnswer.classList.add("correct");
-            console.log("Rightful Answer");
-            
         }
         else
         {
