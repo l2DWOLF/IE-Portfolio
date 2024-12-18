@@ -27,11 +27,11 @@ let time = 30;
 let timer;
 
 
-
 const startQuiz = () => {
     const num = numQuestions.value;
     cat = category.value;
     diff = difficulty.value;
+    startBtn.disabled = true;
 
     //api url; 
     const url = `https://opentdb.com/api.php?amount=${num}&category=${cat}&difficulty=${diff}&type=multiple`;
@@ -61,30 +61,61 @@ const showQuestion = (question) => {
     questionText.innerHTML = question.question;
 
     const answers = [...question.incorrect_answers, 
-                        question.correct_answer.toString(),     
+                        question.correct_answer,     
                     ]; 
 
     answers.sort(() => Math.random() - 0.5);
     answersWrapper.innerHTML = "";
     
+    time = timePerQuestion.value;
+    startTimer(time);
+    
     answers.forEach((answer) => {
         
-        answersWrapper.innerHTML += `
-            <div class="answer">
+        if(answer == question.correct_answer)
+        {
+            console.log("Inside Creation: " + answer);
+            answersWrapper.innerHTML += `
+            <div class="answer correctA">
+                <p>
+                
+                <p class="a-text-field">
                 <span class="text">${answer}</span>
+                <p>
+
                 <span class="checkbox">
                     <span class="icon"></span>
                 </span>
+                </p>
             </div>
-        `;
+            `;
+        }
+        else
+        {
+        answersWrapper.innerHTML += `
+            <div class="answer">
+                <p>
+
+                <p class="a-text-field">
+                <span class="text">${answer}</span>
+                <p>
+
+                <span class="checkbox">
+                    <span class="icon"></span>
+                </span>
+                </p>
+            </div>
+            `;
+        }
     });
 
     questionNum.innerHTML = `
         Question <span class="current">${questions.indexOf(question) + 1}</span>
-                <span class="total"/>/${questions.length}</span>
+                <span class="total"/>/ ${questions.length}</span>
     `;
 
     const answersDiv = document.querySelectorAll(".answer");
+
     answersDiv.forEach((answer) => {
         answer.addEventListener('click', () => {
             if (!answer.classList.contains("check"))
@@ -98,9 +129,6 @@ const showQuestion = (question) => {
             }
         });
     });
-
-    time = timePerQuestion.value;
-    startTimer(time);
 // End Show Questions //      
 };
 
@@ -119,17 +147,6 @@ const startTimer = (time) => {
     }, 1000);
 };
 
-function sanitizeString(str) {
-    for (let i = 0; i < str.length; i++) 
-    {
-        if (str[i] != (/^[A-Za-z]+$/))
-        {
-            str[i] = "";
-        }
-    };
-    return str.trim();
-}
-
 submitBtn.addEventListener('click', () => {
     checkAnswer();
 });
@@ -140,16 +157,7 @@ const checkAnswer = () => {
     
     if (selectedAnswer)
     {
-        let answer = selectedAnswer.innerText.toLowerCase();
-        answer = sanitizeString(answer);
-        console.log("ANS:: " + answer);
-        
-        let userAnswer = questions[currentQuestion -1].correct_answer.toLowerCase();
-        userAnswer = sanitizeString(userAnswer);
-        console.log("userANS:: " + userAnswer);
-        
-
-        if (answer == userAnswer)
+        if (selectedAnswer.classList.contains("correctA"))
         {
             score++;
             selectedAnswer.classList.add("correct");
@@ -158,23 +166,13 @@ const checkAnswer = () => {
         {
             selectedAnswer.classList.add("wrong");
 
-            const correctAnswer = document.querySelectorAll(".answer").forEach((answer) => {
-                if(answer.querySelector(".text").innerHTML === questions[currentQuestion -1].correct_answer)
-                {
-                    answer.classList.add("correct");
-                }
-            });
+            const correctAnswer = document.querySelector(".correctA");
+            correctAnswer.classList.add("correct");
         }
     }
-
     else
     {
-        const correctAnswer = document.querySelectorAll(".answer").forEach((answer) => {
-            if(answer.querySelector(".text").innerHTML === questions[currentQuestion - 1].correct_answer)
-                {
-                    answer.classList.add("correct");
-                } 
-        });
+        correctAnswer.classList.add("correct");
     }
 
     const answerDiv = document.querySelectorAll(".answer");
@@ -183,6 +181,7 @@ const checkAnswer = () => {
     });
 
     submitBtn.style.display = "none";
+    submitBtn.disabled = true;
     nextBtn.style.display = "block";
 };
 
@@ -195,7 +194,8 @@ nextBtn.addEventListener('click', () => {
 
 const nextQuestion = () => {
     if(currentQuestion < questions.length)
-    {
+    {   
+        clearInterval(timer);
         currentQuestion++;
         showQuestion(questions[currentQuestion - 1]);
     }
@@ -204,7 +204,6 @@ const nextQuestion = () => {
         showScore();
     }
 };
-
 
 const finalScore = document.querySelector(".final-score");
 const totalScore = document.querySelector(".total-score");

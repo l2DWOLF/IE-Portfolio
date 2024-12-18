@@ -10,16 +10,19 @@
     <title>IE - Quiz App</title>
 </head>
 <body>
+    <img src="media/bgi3.jpg" id="bgimage" alt="Background Image">
+
     <div class="container">
+        <h1>Quiz App</h1>
 
         <div class="wrapper">
-            <h1>Quiz App</h1>
-            <p>API Generated Quizzes by Category</p>
+            <p>Rest API Generated Quizzes by Category</p>
 
+            <!-- Start Screen -->
             <div class="settings">
                 <h3>Select Quiz Settings</h3>
 
-                <label for="num-questions">Questions Amount:</label>
+                <label for="num-questions">Select Questions Amount:</label>
                 <select name="" id="num-questions">
                     <option value="5">5</option>
                     <option value="10">10</option>
@@ -28,10 +31,10 @@
                     <option value="25">25</option>
                 </select>
 
-                <label for="category">Select Category:</label>
+                <label for="category">Choose Category:</label>
                 <select name="" id="category">
-                    <option value="9">General Knowledge</option>
                     <option value="18">Computers</option>
+                    <option value="9">General Knowledge</option>
                     <option value="15">Video Games</option>
                     <option value="12">Music</option>
                     <option value="11">Film</option>
@@ -58,63 +61,43 @@
 
                 <button class="start-btn">Start Quiz</button>
             </div>
+            <!-- Start Screen -->
 
-
+            <!-- Quiz Screen -->
             <div class="quiz-screen hide">
 
-                <div class="timer">
-                    <div class="progress">
-                        <div class="progress-bar">
-                            <p class="progress-text">
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+                
                 <div class="questions-wrapper">
-                    
                     <div class="number">
                         Question <span class="current"></span>
                                 <span class="total"></span>
                     </div>
 
-                    <div class="question">What is your Question?</div>
-                    <div class="answer-wrapper">
-                        <!-- <div class="answer selected">
-                            <span class="a-text">Answer</span>
-                            <span class="checkbox">
-                                <span class="icon">v</span>
-                            </span>
+                    <div class="timer">
+                        <div class="progress">
+                            <div class="progress-bar">
+                                <p class="progress-text">
+                                </p>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="question"></div>
                     <div class="answer-wrapper">
-                        <div class="answer correct">
-                            <span class="a-text">Answer</span>
-                            <span class="checkbox">
-                                <span class="icon">v</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="answer-wrapper">
-                        <div class="answer wrong">
-                            <span class="a-text">Answer</span>
-                            <span class="checkbox">
-                                <span class="icon">v</span>
-                            </span>
-                        </div> -->
                     </div>
 
                     <button class="submit-btn" disabled="true">Submit</button>
                     <button class="next-btn">Next</button>
                 </div>
-
             </div>
+            <!-- Quiz Screen -->
 
-
+            <!-- End Screen -->
             <div class="end-screen hide">
                 <div class="score">
                     <span class="score-text">Score:</span>
                     <div>
+                        
                         <span class="final-score"></span>
                         <span class="total-score"></span>
                     </div>
@@ -122,10 +105,8 @@
                     <button class="restart-btn">Restart Quiz</button>
                 </div>
             </div>
-
+            <!-- End Screen -->
         </div>
-
     </div>
-
 </body>
 </html>
