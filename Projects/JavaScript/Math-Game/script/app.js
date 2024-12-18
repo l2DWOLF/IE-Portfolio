@@ -81,7 +81,7 @@ const showQuestion = (question) => {
 
     questionNum.innerHTML = `
         Question <span class="current">${questions.indexOf(question) + 1}</span>
-                <span class="total>/${questions.length}</span>
+                <span class="total"/>/${questions.length}</span>
     `;
 
     const answersDiv = document.querySelectorAll(".answer");
@@ -119,18 +119,37 @@ const startTimer = (time) => {
     }, 1000);
 };
 
+function sanitizeString(str) {
+    for (let i = 0; i < str.length; i++) 
+    {
+        if (str[i] != (/^[A-Za-z]+$/))
+        {
+            str[i] = "";
+        }
+    };
+    return str.trim();
+}
+
 submitBtn.addEventListener('click', () => {
     checkAnswer();
 });
+
 const checkAnswer = () => {
     const selectedAnswer = document.querySelector(".answer.selected");
     clearInterval(timer);
     
     if (selectedAnswer)
     {
-        const answer = selectedAnswer.innerText;
+        let answer = selectedAnswer.innerText.toLowerCase();
+        answer = sanitizeString(answer);
+        console.log("ANS:: " + answer);
         
-        if (answer == questions[currentQuestion -1].correct_answer)
+        let userAnswer = questions[currentQuestion -1].correct_answer.toLowerCase();
+        userAnswer = sanitizeString(userAnswer);
+        console.log("userANS:: " + userAnswer);
+        
+
+        if (answer == userAnswer)
         {
             score++;
             selectedAnswer.classList.add("correct");
@@ -194,7 +213,7 @@ const showScore = () => {
     endScreen.classList.remove("hide");
     quiz.classList.add("hide");
     finalScore.innerHTML = score;
-    totalScore.innerHTML = `/${questions.length}`;
+    totalScore.innerHTML = `/ ${questions.length}`;
 };
 
 restartBtn.addEventListener('click', () => {
