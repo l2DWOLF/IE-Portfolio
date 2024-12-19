@@ -618,8 +618,13 @@ header {
     font-size: var(--fs-icon-text);
 }
 
+.aside-item i img {
+    min-width: .75em;
+}
+
 .aside-item a {
-    min-width: 1.5em;
+    min-width: 75px;
+    min-height: 75px;
     display: flex;
     flex-direction: column;
     justify-content: center;
