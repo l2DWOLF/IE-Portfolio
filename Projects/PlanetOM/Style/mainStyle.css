@@ -1429,7 +1429,7 @@ header {
     }
 
         .aside-item i img {
-            min-width: 1.2em;
+            width: 3.2rem;
         }
 
     /* <!-- ----@Media Aside Bar End----------> */
