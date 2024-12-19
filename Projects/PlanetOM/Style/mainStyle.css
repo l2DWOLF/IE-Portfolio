@@ -619,7 +619,7 @@ header {
 }
 
 .aside-item i img {
-    min-width: .75em;
+    min-width: 1em;
 }
 
 .aside-item a {
@@ -1427,6 +1427,10 @@ header {
     .aside-item a {
         font-size: 2.75rem;
     }
+
+        .aside-item i img {
+            min-width: 1.2em;
+        }
 
     /* <!-- ----@Media Aside Bar End----------> */
 
