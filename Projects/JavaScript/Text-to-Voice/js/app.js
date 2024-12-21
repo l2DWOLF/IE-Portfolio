@@ -43,12 +43,6 @@ window.speechSynthesis.onvoiceschanged = () => {
     
 
     voices.forEach((voice, i) => {
-
-        if (voice.name == "Samantha")
-        {
-            speech.voice = voice;
-        }
-        
         voiceSelected.options[i] = new Option(voice.name, i);
     });
 };
