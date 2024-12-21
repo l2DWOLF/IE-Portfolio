@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script type="module" src="js/app.js" defer></script>
+
+    <title>IE - Text to Voice</title>
+</head>
+
+<body>
+    <img src="media/bg3.jpg" id="bgimage" alt="Background Image">
+    <div class="wrapper">
+
+       
+        <div class="board" onclick="return true">
+
+            <h1>Text to Voice</h1>
+            <h2>Text to Speech App, check pronounciation of text or listen to generated quotes.</h2>
+
+            <p>
+                Enter Text Below or click generate quote.
+                <br>
+                Customize your Speaker's Voice or Adjust the Speech speed and pitch. 
+                <br>
+                Click Listen to Play or Pause. Reset to default at top right.
+            </p>
+
+            <div class="app-display" onclick="return true">
+                
+                <textarea type="text" id="text-input"> </textarea>
+                
+                <div class="bar">
+                    <button type="submit" id="submit-btn">Listen / Pause</button>
+                    <button type="submit" id="quote-btn">Generate Quote</button>
+                    <h4>Speaker's Voice Selection:</h4>
+                    <select id="voiceSelection"> </select>
+
+                    <div class="slidecontainer">
+                        <h4>Speech Speed:</h4>
+                        <input type="range" min="0" max="300" value="100"  class="slider speed" id="myRange">
+                    </div>
+                    <div class="slidecontainer">
+                        <h4>Speech Pitch:</h4>
+                        <input type="range" min="0" max="250" value="100" class="slider pitch" id="myRange">
+                    </div>
+                    
+
+                   
+                    
+                </div>
+                
+                <button id="reset-btn">Reset</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
