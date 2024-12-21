@@ -1,4 +1,6 @@
 let speech = new SpeechSynthesisUtterance();
+const API_KEY = "06d615ed78msh853be545a80cf30p1759f8jsn72d3e3ff0713"; // Security Issue => Encrypt
+const URL = `https://famous-quotes4.p.rapidapi.com/random?category=all&count=1`;
 
 let voices = [];
 
@@ -14,8 +16,7 @@ let theQuote = "";
 textInput.value = "Enter Text or Click Generate Quote..";
 const synth = window.speechSynthesis;
 
-const API_KEY = "06d615ed78msh853be545a80cf30p1759f8jsn72d3e3ff0713"; // Security Issue => Encrypt
-const URL = `https://famous-quotes4.p.rapidapi.com/random?category=all&count=1`;
+
 
 async function getQuote() {
 
@@ -28,14 +29,29 @@ async function getQuote() {
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             theAuthor = data[0].author;
             theQuote = data[0].text;
-        })
+            })
         .catch(err => console.error(err));
 }
 
-getQuote();
+window.speechSynthesis.onvoiceschanged = () => {
+    voices = window.speechSynthesis.getVoices();
+    speech.voice = voices[0];
+
+    console.log(voices);
+    
+
+    voices.forEach((voice, i) => {
+
+        if (voice.name == "Samantha")
+        {
+            speech.voice = voice;
+        }
+        
+        voiceSelected.options[i] = new Option(voice.name, i);
+    });
+};
 
 textInput.addEventListener('click', () => {
     if (textInput.value === "Enter Text to Pronounce..")
@@ -53,14 +69,7 @@ pitchSlider.addEventListener("change", () => {
         console.log(speech.pitch);
 });
 
-window.speechSynthesis.onvoiceschanged = () => {
-    voices = window.speechSynthesis.getVoices();
-    speech.voice = voices[0];
-    
-    voices.forEach((voice, i) => {
-        voiceSelected.options[i] = new Option(voice.name, i);  
-    });
-};
+
 
 voiceSelected.addEventListener("change", () => {
     speech.voice = voices[voiceSelected.value];
@@ -78,7 +87,6 @@ submitBtn.addEventListener("click", (e) => {
     }
     else
     {
-        console.log("dude stop");
         synth.cancel();
     }
 });
@@ -89,7 +97,7 @@ resetBtn.addEventListener('click', () => {
     speech.pitch = 1;
     speedSlider.value = 100;
     pitchSlider.value = 100;
-    speech.voice = voices[0];
+    synth.cancel();
 });
 
 
