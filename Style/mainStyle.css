@@ -628,8 +628,6 @@ header {
     height: 100%;
     padding: 2em 25px 0 25px;
     position: relative;
-
-    
 }
 
 .cards-container {
@@ -649,7 +647,7 @@ header {
     object-fit: contain;
 
     min-height: 100%;
-  
+
     padding: 0 0 0 0;
     position: relative;
     display: flex;
@@ -706,18 +704,20 @@ header {
 
 .projects-filter{
     cursor: pointer;
+    transition: .5s;
 }
 
 .projects-filter:hover{
     color:#00fbff;
+    font-size: 1.1rem !important;
 }
+
 
 .projects-section h2 {
     font-size: 2.75rem;
     color: snow;
     
     max-width: 100vw;
-   
     z-index: 2;
 }
 

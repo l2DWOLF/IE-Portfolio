@@ -19,6 +19,7 @@ const timePerQuestion = document.querySelector("#qtime");
 const quiz = document.querySelector(".quiz-screen");
 const endScreen = document.querySelector(".end-screen");
 const startScreen = document.querySelector(".settings");
+const questionNum = document.querySelector(".number");
 
 let questions = [];
 let score = 0;
@@ -27,7 +28,7 @@ let time = 30;
 let timer;
 
 
-const startQuiz = () => {
+const startQuiz = async () => {
     const num = numQuestions.value;
     cat = category.value;
     diff = difficulty.value;
@@ -36,7 +37,7 @@ const startQuiz = () => {
     //api url; 
     const url = `https://opentdb.com/api.php?amount=${num}&category=${cat}&difficulty=${diff}&type=multiple`;
     
-    fetch(url).then((res) => res.json())
+    await fetch(url).then((res) => res.json())
         .then((data) =>
         {
             questions = data.results;
@@ -46,29 +47,38 @@ const startQuiz = () => {
                 currentQuestion = 1;
                 showQuestion(questions[0]);
             }, 1000);
-            
         })
+        .catch((e) => {console.log( e);
+        });
 };
 startBtn.addEventListener('click', startQuiz);
-
 
 
 const showQuestion = (question) => {
     const questionText = document.querySelector(".question");
     const answersWrapper = document.querySelector(".answer-wrapper");
-    const questionNum = document.querySelector(".number");
+    
 
+    time = timePerQuestion.value;
+    startTimer(time);
+
+    if (question)
     questionText.innerHTML = question.question;
-
+    else
+    {
+        questionNum.innerHTML = "This Category or Category difficulty doesn't have the requested amount of questions. \n \n Please Restart and choose a lower questions amount for this Category or Category Difficulty :)";
+        
+        answersWrapper.appendChild(restartBtn);
+        answersWrapper.removeChild(submitBtn);
+        return;
+    }
+    
     const answers = [...question.incorrect_answers, 
                         question.correct_answer,     
                     ]; 
 
     answers.sort(() => Math.random() - 0.5);
     answersWrapper.innerHTML = "";
-    
-    time = timePerQuestion.value;
-    startTimer(time);
     
     answers.forEach((answer) => {
         
@@ -153,6 +163,7 @@ submitBtn.addEventListener('click', () => {
 
 const checkAnswer = () => {
     const selectedAnswer = document.querySelector(".answer.selected");
+    const correctAnswer = document.querySelector(".correctA");
     clearInterval(timer);
     
     if (selectedAnswer)
@@ -164,15 +175,15 @@ const checkAnswer = () => {
         }
         else
         {
+            if(selectedAnswer)
             selectedAnswer.classList.add("wrong");
-
-            const correctAnswer = document.querySelector(".correctA");
             correctAnswer.classList.add("correct");
         }
     }
     else
     {
         correctAnswer.classList.add("correct");
+        questionNum.innerText += "\n Time Out! No Score Accumulated..";
     }
 
     const answerDiv = document.querySelectorAll(".answer");
@@ -218,7 +229,3 @@ const showScore = () => {
 restartBtn.addEventListener('click', () => {
     window.location.reload();
 });
-
-
-
-
