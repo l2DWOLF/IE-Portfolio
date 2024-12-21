@@ -12,11 +12,6 @@
      scrollbar-width:none;
  }
 
- *::-webkit-scrollbar
- {
-    display:none;
- }
-
  :root{
 
     --clr-1: #3D5A80;
@@ -90,7 +85,7 @@ img {
    font-size: 4rem;
 }
 .wrapper h1, .wrapper h2{
-    color: paleturquoise;
+    color: #B8F3FF;
     text-align: center;
    font-weight: 600;
 }
@@ -103,23 +98,26 @@ img {
    width: 75%
 }
 
-h3
-{
-   font-weight: 800;
-}
 
 button{
    background-color: #21022f25;
    box-shadow: 0 2px 5px black;
    color: snow;
    border-radius: 5px;
-   font-size: .85rem !important;
+   font-size: 1rem;
    transition: .5s;
+
+   padding: 5px 15px;
+   border-radius: 5px;
+   width: 100%;
+   font-weight: 600;
+   cursor: pointer;
+   color: snow;
 }
 
 button:hover {
-    background: black;
-    color: snow;
+    background: rgb(86, 236, 101);
+    color: black;
     border: 1px solid snow;
 }
 
@@ -132,11 +130,12 @@ button:hover {
 
  .board
  { 
+    margin-top: 2em;
     margin-bottom: 3em;
     position:relative;
     width: 50vw;
     min-height: 100%;
-    padding: 1em;
+    padding: 0.2em 0.2em 5em;
     gap: .5em;
     color: snow;
     
@@ -154,10 +153,11 @@ button:hover {
  }
 
  .board p {
-   text-align: left;
+   text-align: center;
    margin-top: 2em;
    font-size: .9rem;
    width: 70%;
+   color:#B8F3FF;
  }
 
   .app-display {
@@ -189,22 +189,20 @@ button:hover {
 
  #voiceSelection {
     font-size: .8rem;
-
+   background-color: #04AA6D;
  }
 
  #text-input{
+   min-width: 25%;
    width: 80%;
    height: 200px;
    border-radius: 5px;
-   background-color: rgba(255, 255, 255, 0.944);
+   background-color: rgba(255, 255, 255, 0.814);
    padding: .5em;
    font-weight: 600;
    font-size: 1.1rem;
    font-family:'poppins', Helvetica; 
  }
-
-
-
 
  .form-wrapper{
     display: flex;
@@ -214,20 +212,9 @@ button:hover {
 
     padding:.5em;
  }
- 
- button{
-    padding: 5px 15px;
-    border-radius: 5px;
-    width: 100%;
-    font-weight: 600 !important;
-    font-size: .8rem !important;
-    cursor: pointer;
-    color:snow;
- }
 
  .slidecontainer {
     width: 100%;
-
  }
 
  .slider {
@@ -268,21 +255,33 @@ button:hover {
 
  @media (max-width: 1100px)
  {
-    .task-lanes{
-        flex-direction: column;
-    }
 
     .board
     {
-        width:92.5%;
-        padding: 15px;
+        width:95%;
+        padding: 0.2em 0.2em 5em;
     }
 
-    #tasks-form input{
-        width: 90%;
+    .app-display{
+      padding: 0.2em;
     }
 
-    #tasks-form button{
-       width: 100px;
+    .board h1
+    {font-size: 2.5rem;
+      margin-top: 2em;
     }
- }
+    .board h2
+    {font-size: 1.25rem;
+   width: 90%;}
+    .board p
+    {
+      margin-top: 0.2em;
+      font-size: 1rem;
+      font-weight: 600;
+      width:90%;
+    }
+
+    #text-input{
+      width:95%;
+    }
+}

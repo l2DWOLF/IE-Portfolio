@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -19,6 +19,7 @@ img {
 #bgimage {
     object-fit: cover;
     position: fixed;
+    width: 100vw;
     top: 0;
     left: 0;
     background-repeat: repeat-y;
@@ -34,7 +35,6 @@ img {
 
 .container
 { 
-    position: relative;
     background-color: #eaff000c;
     background-size: cover;
     
@@ -45,8 +45,9 @@ img {
 }
 
 h1{
-    margin: 1em;
-    font-size: rem;
+
+    font-size: 3.25rem;
+    color: #B8F3FF;
 }
 
 .wrapper p{
@@ -55,12 +56,13 @@ h1{
 
 .wrapper {
     padding: 2em;
-    background: #456083ae;
+    background: #456083cd;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
+    margin-top: 9em;
     margin-bottom: 5em;
     width: 70%;
 
@@ -72,6 +74,7 @@ h1{
 
 .wrapper:hover {
     border: 3px solid #B8F3FF;
+    background: #456083e7;
 }
 
 .settings{
@@ -187,6 +190,7 @@ font-weight: 700;
 .questions-wrapper .number{
     font-size: 1.25rem;
     font-weight: 600;
+    text-align: center;
 }
 
 .questions-wrapper .number .total {
@@ -324,7 +328,7 @@ font-weight: 700;
 
     .container
     {
-        padding-bottom: 5em !important;
+        padding-bottom: 1em !important;
         text-align: center;
     }
     h1{

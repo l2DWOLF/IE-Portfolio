@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="Media/IE-Favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="Media/IE-Favicon/favicon-16x16.png">
     <link rel="manifest" href="Media/IE-Favicon/site.webmanifest">
+    <script src="/script/script.js" defer></script>
 
     <title>IE Portfolio - Full Stack Portfolio</title>
 </head>
@@ -116,11 +117,18 @@
         <section class="projects-section" id="projects-section" onclick="return true">
             <div class="sticky-title">
                 <h2>Projects</h2>
+                <div class="projects-menu" onclick="return true">
+                    <p id="AP" class="projects-filter">All Projects</p> |
+                    <p id="JSP" class="projects-filter">JavaScript</p> |
+                    <p id="LPP" class="projects-filter">Landing Pages</p> | 
+                    <p id="CPP" class="projects-filter">Clients</p>
+                    
+                </div>
             </div>
 
             <div class="cards-container"><!-- --Cards Container-- -->
                 <!-- --JavaScript Card 1-- -->
-                <div class="cards-box" onclick="return true">
+                <div class="cards-box js-card" onclick="return true">
                     <div class="cards-img-box">
                         <img src="Media/Cards/weather-app.png" alt="Weather App">
                     </div>
@@ -137,7 +145,7 @@
                         Project</a>
                 </div>
                 <!-- --JavaScript Card 2-- -->
-                <div class="cards-box" onclick="return true">
+                <div class="cards-box js-card" onclick="return true">
                     <div class="cards-img-box">
                         <img src="Media/Cards/task-manager.png" alt="Task Manager Image">
                     </div>
@@ -154,22 +162,52 @@
                         Project</a>
                 </div>
                 <!-- --JavaScript Card 3-- -->
-                <div class="cards-box" onclick="return true">
+                <div class="cards-box js-card" onclick="return true">
                     <div class="cards-img-box">
-                        <img src="Media/Cards/task-manager.png" alt="Task Manager Image">
+                        <img src="Media/Cards/quiz-app.png" alt="Task Manager Image">
                     </div>
                     <div class="card-tags">| JavaScript | Rest API |</div>
                     <h4>Quiz App</h4>
                     <p>
                         This project exemplifies the application of JavaScript & Rest API into a
-                        functional Quizzer Application. Showcasing automatically generated quizzes by a variety of Categories. It has been developed using JavaScript, API, HTML and CSS.
+                        functional Quizzer Application. Showcasing automatically generated quizzes by a variety of Categories, with Settings control over: Questions, Difficulty, Timer. It has been developed using JavaScript, Rest API, HTML and CSS.
                     </p>
                     <a href="Projects/JavaScript/Quiz-App/index.html" class="cards-btn"
                         alt="View & Download Project">View
                         Project</a>
                 </div>
+                <!-- --JavaScript Card 4-- -->
+                <div class="cards-box js-card" onclick="return true">
+                    <div class="cards-img-box">
+                        <img src="Media/Cards/text-to-voice.png" alt="Text to Voice Quotes Image">
+                    </div>
+                    <div class="card-tags">| JavaScript | Rest API | </div>
+                    <h4>Text to Voice Quotes</h4>
+                    <p>
+                        This project exemplifies the application of JavaScript & Rest API into a
+                        functional Text to Voice Quotes Application. Showcasing API generated quotes with text to voice reader, including speaker voice type, speech speed & pitch. It has been developed using JavaScript, Rest API, HTML and CSS.
+                    </p>
+                    <a href="Projects/JavaScript/Text-to-Voice/index.html" class="cards-btn"
+                        alt="View & Download Project">View
+                        Project</a>
+                </div>
+                <!-- --Clients Page Card 1-- -->
+                <div class="cards-box client-card" onclick="return true">
+                    <div class="cards-img-box">
+                        <img src="Media/Cards/planet-om-music.png" alt="Planet OM - Artist Website">
+                    </div>
+                    <div class="card-tags">| Artist / Musician Page| </div>
+                    <h4>Planet OM Music</h4>
+                    <p>
+                        Meet our clients: Planet OM Music.
+                        We've developed this Musician / Artist Website per our client's vision and personal goals for design & functionality, It has been developed using JavaScript, HTML and
+                        CSS.
+                    </p>
+                    <a href="https://www.PlanetOmMusic.com" target="_blank" class="cards-btn" alt="Planet OM Music's Website">View
+                        Project</a>
+                </div>
                 <!-- --Landing Page Card 1-- -->
-                <div class="cards-box" onclick="return true">
+                <div class="cards-box lp-card" onclick="return true">
                     <div class="cards-img-box">
                         <img src="Media/Cards/1-here-and-now.png" alt="Project 1 - Here & Now Landing Page">
                     </div>
@@ -183,8 +221,8 @@
                     <a href="Projects/Project1-here-and-now/showcase-page" class="cards-btn"
                         alt="View & Download Project">View Project</a>
                 </div>
-                <!-- --Card 2-- -->
-                <div class="cards-box" onclick="return true">
+                <!-- --Landing Page Card 2-- -->
+                <div class="cards-box lp-card" onclick="return true">
                     <div class="cards-img-box">
                         <img src="Media/Cards/2-leading-forward-type1.png"
                             alt="Project 2 - Leading you Forward Landing Page Example 1">
@@ -199,8 +237,8 @@
                     <a href="Projects/Project2-leading-forward-type1/showcase-page" class="cards-btn"
                         alt="View & Download Project">View Project</a>
                 </div>
-                <!-- --Card 3-- -->
-                <div class="cards-box" onclick="return true">
+                <!-- --Landing Page Card 3-- -->
+                <div class="cards-box lp-card" onclick="return true">
                     <div class="cards-img-box">
                         <img src="Media/Cards/3-coffee.png" alt="Project 3 - Coffee Coupon Landing Page">
                     </div>
@@ -215,8 +253,8 @@
                     <a href="Projects/Project3-coffee/showcase-page" class="cards-btn"
                         alt="View & Download Project">View Project</a>
                 </div>
-                <!-- --Card 4-- -->
-                <div class="cards-box" onclick="return true">
+                <!-- --Landing Page Card 4-- -->
+                <div class="cards-box lp-card" onclick="return true">
                     <div class="cards-img-box">
                         <img src="Media/Cards/4-leading-forward-type2.png"
                             alt="Project 4 - Leading you Forward Example 2 - Landing Page">
@@ -231,8 +269,8 @@
                     <a href="Projects/Project4-leading-forward-type2/showcase-page" class="cards-btn"
                         alt="View & Download Project">View Project</a>
                 </div>
-                <!-- --Card 5-- -->
-                <div class="cards-box" onclick="return true">
+                <!-- --Landing Page Card 5-- -->
+                <div class="cards-box lp-card" onclick="return true">
                     <div class="cards-img-box">
                         <img src="Media/Cards/5-discover-the-world.png"
                             alt="Project 5 - Discover The World Grid Gallery">
@@ -248,8 +286,8 @@
                     <a href="Projects/Project5-discover-the-world/showcase-page" class="cards-btn"
                         alt="View & Download Project">View Project</a>
                 </div>
-                <!-- --Card 6-- -->
-                <div class="cards-box" onclick="return true">
+                <!-- --Landing Page Card 6-- -->
+                <div class="cards-box lp-card" onclick="return true">
                     <div class="cards-img-box">
                         <img src="Media/Cards/6-free-consultation.png" alt="Project 6 - Free Consultation Request Form">
                     </div>

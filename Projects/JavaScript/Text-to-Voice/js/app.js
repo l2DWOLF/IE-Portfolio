@@ -39,11 +39,13 @@ window.speechSynthesis.onvoiceschanged = () => {
     voices = window.speechSynthesis.getVoices();
     speech.voice = voices[0];
 
-    console.log(voices);
-    
-
     voices.forEach((voice, i) => {
+        if (i < 25)
         voiceSelected.options[i] = new Option(voice.name, i);
+        else
+        {
+            return;
+        }
     });
 };
 
