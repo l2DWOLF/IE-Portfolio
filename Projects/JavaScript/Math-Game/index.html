@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/app.js" defer></script>
+
+    <title>IE - Math Practice Game</title>
+</head>
+
+<body>
+    <img src="media/bg3.jpg" id="bgimage" alt="Background Image">
+    <div class="wrapper">
+
+        <div class="board" onclick="return true">
+
+            <h1>Math Game</h1>
+            <h2>Solve Math Questions</h2>
+            <h3>Practice your Math - Solve Math Questions.</h3>
+            <p class="instructions">
+                Choose the amount of variables to calculate, the operand to practice, and the max range of highest number.
+                <br>
+                Change of settings will affect the following question, you can reveal answers after submitting any answer.
+            </p>
+
+            <div class="app-display" onclick="return true">
+
+                <div class="game-settings">
+                    <p>Game Settings: </p>
+
+                    <div class="set-divs">
+                     
+                        <label for="operators">Select Operator:</label>
+                        <select name="operators" id="operators"> 
+                            <option value="add">+</option>
+                            <option value="substract">-</option>
+                            <option value="multiply">*</option>
+                            <option value="divide">/</option>
+                        </select>   
+
+                        <label for="variables">Number of Variables:</label>
+                        <select name="variables" id="variablesNum"> 
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+
+                        <label for="customlimit" id="limit-label">Max Var Range:</label> 
+                        <input type="number" id="custom-limit" name="customlimit" value="50"></input>
+                    </div>
+
+                    <button id="start-btn">Start Game</button>
+                </div>
+
+                <div class="question-info">
+
+                    <div class="ctrl-btns">
+                        <button id="settings-btn">Settings</button>
+                        <button id="reset-btn">Reset</button>
+                    </div>
+
+
+                    <p class="question-title"></p>
+                    <p class="result-stats"> </p>
+                    <p class="game-stats"></p>
+                    <button id="reveal-btn">Reveal Answer</button>
+                </div>
+                
+                <form action="submit" id="form-display">
+                    <div class="question-div">
+                        <p>Current Question:</p>
+                        <p class="question"></p>
+                    </div>
+                <label for="userInput" id="ans-label">Enter Answer:</label>
+                <input type="number" id="text-input" name="userInput"> </input>
+                <button type="submit" id="submit-btn">Submit Answer</button>
+                <button id="next-btn">Next Question</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

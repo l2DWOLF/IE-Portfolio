@@ -709,6 +709,7 @@ header {
 
 .projects-filter:hover{
     color:#00fbff;
+    text-decoration: underline;
     font-size: 1.1rem !important;
 }
 
@@ -814,6 +815,8 @@ header {
     box-shadow: 0 0 8px var(--secondary) !important;
     transform: scale(1.1) translateY(-5%);
 }
+
+
 
 .cards-box:hover .cards-btn {
     background: var(--secondary);
@@ -1304,6 +1307,7 @@ header {
         min-width: 100%;
         overflow: hidden;
         border: none;
+        height: 70px;
     }
 
     .projects-menu {
@@ -1314,17 +1318,23 @@ header {
         color: white;
     }
 
-    .projects-menu p {
-        font-size: .75rem !important;
+    .projects-filter:hover {
+        font-size: .8rem !important;
+        padding: .3em .1em;
+        margin-bottom: .1em;
+        color: #00fbff !important;
     }
 
     .projects-filter {
+        font-size: .75rem !important;
         cursor: pointer;
     }
 
+
+
     .projects-section h2 {
         min-width: 100%;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .projects-section p {
@@ -1337,11 +1347,14 @@ header {
         width: 90% !important;
     }
 
-    .cards-box {
+    /* .cards-box {
         min-height: 600px;
+    } */
+
+    .cards-img-box {
+        min-height: 30%;
+        max-height: 30%;
     }
-
-
     /* <!-- ----@Media Projects Section End----------> */
 
     /* <!-- ----@Media About Section--------------> */
