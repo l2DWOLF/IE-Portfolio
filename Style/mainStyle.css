@@ -1312,21 +1312,21 @@ header {
 
     .projects-menu {
         display: flex;
-        gap: .2em;
+        gap: .3em;
         
         font-weight: 600;
         color: white;
     }
 
     .projects-filter:hover {
-        font-size: .8rem !important;
+        font-size: .75rem !important;
         padding: .3em .1em;
-        margin-bottom: .1em;
         color: #00fbff !important;
     }
 
     .projects-filter {
         font-size: .75rem !important;
+        padding: .3em .1em;
         cursor: pointer;
     }
 
