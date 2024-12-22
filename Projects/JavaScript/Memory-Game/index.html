@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/app.js" defer></script>
+
+    <title>IE - Memory Game</title>
+</head>
+
+<body>
+    <img src="media/bg3.jpg" id="bgimage" alt="Background Image">
+    <div class="wrapper">
+
+        <header class="header">
+        <h1>Memory Game</h1>
+        <h2>js shift+deleted .. lol =] </h2>
+        </header>
+
+        <div class="score-panel">
+
+            <h3>Score Panel</h3>
+
+            <span class="moves-counter">
+                0
+            </span> moves
+
+            <div class="reset">
+                <button id="reset-btn" >Reset Game</button>
+            </div>
+
+            <div class="win-game">
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+
+                        <h2>Congratulations!</h2>
+                        <p>You've Won the Game & Matched all Pairs.</p>
+                        <button id="play-again-btn">Play Again?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="board" onclick="return true">
+            <ul class="deck"></ul>
+
+        </div>
+    </div>
+
+</body>
+</html>

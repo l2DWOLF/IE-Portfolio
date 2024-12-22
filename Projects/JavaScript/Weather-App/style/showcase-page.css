@@ -758,9 +758,10 @@
     align-items: center;
     margin-top: 2em;
     padding: 3% 3% 8% !important;
-    flex-direction: column;
+    flex-direction: column-reverse;
     overflow: hidden;
-
+    border:none;
+    margin-bottom: 2em;
 }
 
 .home-info
