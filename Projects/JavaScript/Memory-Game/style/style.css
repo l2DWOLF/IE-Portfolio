@@ -35,7 +35,6 @@
    --accent: #67717e;
    --accent2: #554971;
    --accent3: #c6d4e9;
-   --lightpurpleTrans: rgba(55, 7, 67, 0.162);
 }
 
 body {
@@ -73,15 +72,15 @@ animation: opaCity 20s linear infinite;
 
 .wrapper{
 max-width:100vw;
-height: 100%;
+
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-padding: 2em 5px;
+padding: 2em;
 gap: .5em;
 
-color: black;
+color: #accbee;
 }
 
 
@@ -89,6 +88,7 @@ button{
 background-color: #21022f25;
 box-shadow: 0 2px 5px black;
 color: snow;
+padding: .5em;
 border-radius: 5px;
 font-size: .85rem !important;
 transition: .5s;
@@ -100,23 +100,34 @@ button:hover {
    border: 1px solid snow;
 }
 
+h1{
+   font-size: 3rem;
+}
+h2{
+   font-size: 1.2rem;
+   text-align: center;
+}
+
 .board
 { 
-   margin-bottom: 3em;
-   position:relative;
-   width: 100%;
-   min-height: 100%;
+   display: grid;
+   grid-template-columns: repeat(4,23%);
+   grid-template-rows: repeat(4,23%);
+   gap: .6em;
+
+   width: 60vw;
+   height: 80vh;
    padding: 2em;
-   gap: .5em;
+   
    color: snow;
    
    background: #6c7e997c;
    border: 1px solid black;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+
    border-radius: 5px;
    box-shadow: 0px 0px 3px 1px black;
+
+   perspective: 100vw;
 }
 
 .board:hover {
@@ -128,16 +139,73 @@ text-align: center;
 margin-top: .2em;
 }
 
+/* // NEW STUFF HERE //  */ /* // NEW STUFF HERE //  */
+.card{
+   position: relative;
+   
+   transform-style: preserve-3d;
+   
+   /* transform: rotateY(180deg); */
+   
+   transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   border: 1px solid rgba(255, 217, 0, 0.508);
+}
 
+.face, .back{
+   width: 100%;
+   height: 100%;
+   position:absolute;
+   pointer-events: none;
+}
 
-@media (max-width: 1100px)
+.back{
+   background: black;
+   background-image: url(/Media/IE-Favicon/android-chrome-192x192.png);
+   object-fit:fill;
+   background-position: center;
+   background-size: 100%;
+
+   -webkit-backface-visibility: hidden;
+   -moz-backface-visibility:hidden;
+   backface-visibility: hidden;
+}
+
+.toggleCard{
+   transform: rotateY(180deg);
+   outline:3px solid green;
+}
+
+.pointerEoff{
+   pointer-events: "none";
+}
+
+.pointerEon{
+   pointer-events: "all";
+}
+
+.score-panel{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+.moves-counter{
+   text-align: center;
+   font-size: 1.5rem;
+}
+
+/* // NEW STUFF HERE //  */
+/* // NEW STUFF HERE //  */
+
+@media (max-width: 700px)
 {
 
 
    .board
    {
-      width:92.5%;
-      padding: 15px;
+      width: 90vw;
+      height: 70vw;
    }
 
 
