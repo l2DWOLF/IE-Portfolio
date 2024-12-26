@@ -109,6 +109,8 @@ function generateQuestion()
         });
         qsum = eval(questionDisplay.innerText);
 
+            qsum = qsum.toFixed(1);
+
     }
 
     questionDisplay.innerHTML += ' = ?';
