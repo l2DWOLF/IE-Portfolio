@@ -25,7 +25,7 @@ const settingsBtn = document.querySelector('#settings-btn');
 const resetBtn = document.querySelector('#reset-btn');
 
 
-let max = 10;
+let max = 50;
 let qnum = 0;
 let qsum = 0;
 let varsNum = 2;
@@ -105,9 +105,10 @@ function generateQuestion()
     {
         variables.forEach((vari, index) => {
             if (index == 0 || (index == variables.length && index > 1)) { questionDisplay.innerHTML += `${vari}`; }
-            else { questionDisplay.innerHTML += ` / ${vari} `; }
+            else { questionDisplay.innerHTML += ` / ${Number(vari)} `; }
         });
         qsum = eval(questionDisplay.innerText);
+
     }
 
     questionDisplay.innerHTML += ' = ?';

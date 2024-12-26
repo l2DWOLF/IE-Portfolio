@@ -1,7 +1,8 @@
 
 const board = document.querySelector('.board');
 const movesCounter = document.querySelector('.moves-counter');
-playerMoves = 25; 
+let playerMoves = 25; 
+let sessionMoves = 25; 
 movesCounter.textContent = playerMoves;
 
 const resetBtn = document.querySelector('#reset-btn');
@@ -90,7 +91,7 @@ const checkCards = (e) =>{
         }
         else
         {
-            
+            playerMoves--;
             flippedCards.forEach((card) => {
                 card.classList.remove('flipped');
                 setTimeout(() => card.style.pointerEvents = "all", 1000);
@@ -100,18 +101,17 @@ const checkCards = (e) =>{
             setTimeout(() => board.style.pointerEvents = "all", 1000);
 
         }
-        playerMoves--;
         movesCounter.textContent = playerMoves;
         
         const toggledCards = document.querySelectorAll('.toggleCard')
         if(toggledCards.length === 16)
         {
-            restart("Won GAME!")
+            restart("Excellent Job, You've beat the game! \n Try to beat the game with 2 moves less than your last run.", true);
         }
 
         if(playerMoves === 0)
         {
-            restart("Try Again!");
+            restart("Try Again!", false);
         }
 
         
@@ -120,7 +120,7 @@ const checkCards = (e) =>{
 
 generateCards();
 
-const restart = (text) => {
+const restart = (text, lastGame) => {
     let cardData = randomize();
     let cardData2 = randomize();
     let cardsData = cardData.concat(cardData2);
@@ -151,7 +151,25 @@ const restart = (text) => {
         
     });
 
-    playerMoves = 8;
+
+    if (lastGame)
+    {
+        sessionMoves -= 2; 
+        playerMoves = sessionMoves; 
+    }
+    else if (sessionMoves < 6)
+    {
+        window.alert("Ultimate Trophy Achieved !");
+        sessionMoves = 20;
+        playerMoves = 20;
+    }
+    else
+    {
+        sessionMoves = 25;
+        playerMoves = 25;
+    }
+
+    
     movesCounter.textContent = playerMoves;
     setTimeout(() => window.alert((text), 100))
 }
