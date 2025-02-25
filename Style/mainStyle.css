@@ -21,8 +21,8 @@
     --accent3: #94accb;
     --lightpurpleTrans: rgba(55, 7, 67, 0.162);
 
-    --fs-h1: 5rem;
-    --fs-h1-span: 6rem;
+    --fs-h1: 4.5rem;
+    --fs-h1-span: 5rem;
     --fs-h2: 3.5rem;
     --fs-h3: 2rem;
     --fs-h4: 1.4rem;
@@ -619,7 +619,6 @@ header {
     object-fit: contain;
     background-position: center center;
     background-blend-mode: multiply;
-
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -631,7 +630,6 @@ header {
 }
 
 .cards-container {
-
     background: transparent;
     width: 90%;
     display: grid;
@@ -645,9 +643,7 @@ header {
 .cards-box {
     background: rgba(0, 0, 0, 0.2);
     object-fit: contain;
-
     min-height: 100%;
-
     padding: 0 0 0 0;
     position: relative;
     display: flex;
@@ -697,7 +693,7 @@ header {
 .projects-menu{
     display:flex;
     gap: 1em;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 700;
     color: white;
 }
@@ -710,12 +706,11 @@ header {
 .projects-filter:hover{
     color:#00fbff;
     text-decoration: underline;
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
 }
 
-
 .projects-section h2 {
-    font-size: 2.75rem;
+    font-size: 2rem;
     color: snow;
     
     max-width: 100vw;

@@ -1,100 +1,61 @@
 const allProjectsBtn = document.querySelector('#AP');
+const beBtn = document.querySelector('#BE');
+const rpBtn = document.querySelector('#RP');
 const jsBtn = document.querySelector('#JSP');
 const lpBtn = document.querySelector('#LPP');
 const clientsBtn = document.querySelector('#CPP');
-const rpBtn = document.querySelector('#RP');
 
-let lpCards = document.querySelectorAll('.lp-card');
+
+let allCards = document.querySelectorAll('.cards-box');
+let backendCards = document.querySelectorAll('.be-card');
+let reactCards = document.querySelectorAll('.rp-card');
 let jsCards = document.querySelectorAll('.js-card');
-let rpCards = document.querySelectorAll('.rp-card');
+let lpCards = document.querySelectorAll('.lp-card');
 let clientCards = document.querySelectorAll('.client-card');
+
+let cardTypes = {
+    backend: backendCards,
+    react: reactCards,
+    js: jsCards,
+    landing: lpCards,
+    clients: clientCards,
+    all: allCards
+};
 
 const projectsTop = document.querySelector('.projects-section');
 
+function filterDisplay(type) {
+    if(type !== "all"){
+        Object.values(cardTypes).forEach((cards) => {
+            cards.forEach((card) => {
+                card.style.display = "none";
+            });
+        });
+    };
 
-
-jsBtn.addEventListener('click', () => {
-    lpCards.forEach((card) => {
-        card.style.display = "none";
-    })
-    rpCards.forEach((card) => {
-        card.style.display = "none";
-    })
-    clientCards.forEach((card) => {
-        card.style.display = "none";
-    })
-    jsCards.forEach((card) => {
-        card.style.display = "flex";
-    })
-
+    if (cardTypes[type]) {
+        cardTypes[type].forEach((card) => {
+            card.style.display = "flex";
+        });
+    }
     projectsTop.scrollIntoView({ behavior: "smooth" });
-});
+};
 
-lpBtn.addEventListener('click', () => {
-    jsCards.forEach((card) => {
-        card.style.display = "none";
-    })
-    rpCards.forEach((card) => {
-        card.style.display = "none";
-    })
-    clientCards.forEach((card) => {
-        card.style.display = "none";
-    })
-    lpCards.forEach((card) => {
-        card.style.display = "flex";
-    })
-
-    projectsTop.scrollIntoView({ behavior: "smooth" });
+beBtn.addEventListener('click', () => {
+    filterDisplay("backend");
 });
 rpBtn.addEventListener('click', () => {
-    jsCards.forEach((card) => {
-        card.style.display = "none";
-    })
-    lpCards.forEach((card) => {
-        card.style.display = "none";
-    })
-    clientCards.forEach((card) => {
-        card.style.display = "none";
-    })
-
-    rpCards.forEach((card) => {
-        card.style.display="flex";
-    })
-
-    projectsTop.scrollIntoView({ behavior: "smooth" });
+    filterDisplay("react");
 });
-
+jsBtn.addEventListener('click', () => {
+    filterDisplay("js");
+});
+lpBtn.addEventListener('click', () => {
+    filterDisplay("landing");
+});
 clientsBtn.addEventListener('click', () => {
-    jsCards.forEach((card) => {
-        card.style.display = "none";
-    })
-    lpCards.forEach((card) => {
-        card.style.display = "none";
-    })
-    rpCards.forEach((card) => {
-        card.style.display = "none";
-    })
-    clientCards.forEach((card) => {
-        card.style.display = "flex";
-    })
-    
-    projectsTop.scrollIntoView({behavior: "smooth"});
+    filterDisplay("clients");
 });
-
 allProjectsBtn.addEventListener('click', () => {
-    rpCards.forEach((card) => {
-        card.style.display = "flex";
-    });
-    jsCards.forEach((card) => {
-        card.style.display = "flex";
-    });
-    lpCards.forEach((card) => {
-        card.style.display = "flex";
-    });
-    clientCards.forEach((card) => {
-        card.style.display = "flex";
-    });
-    
-
-    projectsTop.scrollIntoView({ behavior: "smooth" });
+    filterDisplay("all");
 });
