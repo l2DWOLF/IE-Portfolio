@@ -1278,9 +1278,6 @@ header {
     /* <!-- ----@Media Home Section End----------> */
 
     /* <!-- ----@Media Aside Bar--------------> */
-    #aside-item-cpp {
-        display: none;
-    }
 
     /* <!-- ----@Media Aside Bar End----------> */
 
@@ -1325,11 +1322,9 @@ header {
         cursor: pointer;
     }
 
-
-
     .projects-section h2 {
         min-width: 100%;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
     .projects-section p {
