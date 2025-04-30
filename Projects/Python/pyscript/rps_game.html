@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html-escaper@3.0.3/index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>RPS Game</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Console Display</h1>
+        <div id="display">Display</div>
+        <h3>User Display</h3>
+        <div id="user-display">
+            <label for="input-field">Console Input: </label>
+            <input id="uinput" type="text" name="input-field"></input>
+            <div class="btn-div">
+                <button id="input-btn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <py-script src="rps_pyscript.py">
+    </py-script>
+</body>
+</html>
