@@ -3,7 +3,7 @@ const beBtn = document.querySelector('#BE');
 const rpBtn = document.querySelector('#RP');
 const jsBtn = document.querySelector('#JSP');
 const lpBtn = document.querySelector('#LPP');
-const clientsBtn = document.querySelector('#CPP');
+const pyBtn = document.querySelector('#PYP');
 
 
 let allCards = document.querySelectorAll('.cards-box');
@@ -11,14 +11,14 @@ let backendCards = document.querySelectorAll('.be-card');
 let reactCards = document.querySelectorAll('.rp-card');
 let jsCards = document.querySelectorAll('.js-card');
 let lpCards = document.querySelectorAll('.lp-card');
-let clientCards = document.querySelectorAll('.client-card');
+let pythonCards = document.querySelectorAll('.py-card');
 
 let cardTypes = {
     backend: backendCards,
     react: reactCards,
     js: jsCards,
     landing: lpCards,
-    clients: clientCards,
+    python: pythonCards,
     all: allCards
 };
 
@@ -53,8 +53,8 @@ jsBtn.addEventListener('click', () => {
 lpBtn.addEventListener('click', () => {
     filterDisplay("landing");
 });
-clientsBtn.addEventListener('click', () => {
-    filterDisplay("clients");
+pyBtn.addEventListener('click', () => {
+    filterDisplay("python");
 });
 allProjectsBtn.addEventListener('click', () => {
     filterDisplay("all");

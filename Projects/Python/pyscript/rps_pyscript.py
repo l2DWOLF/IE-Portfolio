@@ -2,7 +2,6 @@ from pyscript import document
 from pyodide.ffi import create_proxy
 from random import randint
 
-# Initialize display elements and game state variables
 display = document.getElementById('display')
 inputField = document.getElementById('uinput')
 inputBtn = document.getElementById('input-btn')
@@ -23,18 +22,18 @@ def disp_move(move, ptype):
     if move == "1":
         cout(f"{ptype}: 🪨")
     elif move == "2":
-        cout(f"{ptype} 📃")
+        cout(f"{ptype}: 📃")
     elif move == "3":
-        cout(f"{ptype} ✂️")
+        cout(f"{ptype}: ✂️")
 
 def showInput(event=None):
     userInput = inputField.value
-    if userInput == "quit":
+    if userInput.lower() == "quit":
         cout("Closing Game, Thanks for Playing! :)")
         cout(quit_greet[randint(0, 2)])
         reset_game()
         return
-    elif userInput == "reset":
+    elif userInput.lower() == "reset":
         reset_game()
         return
 
@@ -68,7 +67,7 @@ def determine_winner(player_move, bot_move):
 def display_score():
     global total_rounds
     win_rate = (player_score / total_rounds) * 100 if total_rounds > 0 else 0
-    cout(f"Round #{total_rounds} Score - Player: {player_score} | Bot: {bot_score} | Ties: {tied_rounds} | Win Rate: {win_rate:.2f}%")
+    cout(f"[Round #{total_rounds} Scores]: Player - {player_score} | Bot - {bot_score} | Ties: {tied_rounds} | Win Rate: {win_rate:.2f}%")
     total_rounds += 1
 
 def reset_game():
@@ -83,11 +82,9 @@ def reset_game():
     display.scrollTop = display.scrollHeight
 
 inputBtn.addEventListener("click", create_proxy(showInput))
-
 def submitKey(event):
     if event.key == "Enter":
         showInput()
-
 inputField.addEventListener("keydown", create_proxy(submitKey))
 
 # Welcome Message
