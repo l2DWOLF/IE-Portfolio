@@ -737,8 +737,8 @@ header {
 
 .cards-img-box {
     width: 100%;
-    min-height: 40%;
-    max-height: 40%;
+    min-height: 35%;
+    max-height: 35%;
     margin: 0;
     padding: 0;
     overflow: hidden;
