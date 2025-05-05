@@ -1,10 +1,10 @@
+const stickyTitle = document.querySelector('.sticky-title');
 const allProjectsBtn = document.querySelector('#AP');
 const beBtn = document.querySelector('#BE');
 const rpBtn = document.querySelector('#RP');
 const jsBtn = document.querySelector('#JSP');
 const lpBtn = document.querySelector('#LPP');
 const pyBtn = document.querySelector('#PYP');
-
 
 let allCards = document.querySelectorAll('.cards-box');
 let backendCards = document.querySelectorAll('.be-card');
@@ -59,3 +59,32 @@ pyBtn.addEventListener('click', () => {
 allProjectsBtn.addEventListener('click', () => {
     filterDisplay("all");
 });
+
+// Mobile Scroll Animation // 
+document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.cards-box');
+    const projectsSection = document.querySelector('.projects-section');
+    const offset = 400;
+
+    function onScroll() {
+        const sectionTop = projectsSection.getBoundingClientRect().top;
+        const sectionBottom = projectsSection.getBoundingClientRect().bottom;
+
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            const cardBottom = card.getBoundingClientRect().bottom;
+            if (cardTop < window.innerHeight - offset && cardBottom > offset) {
+                card.classList.add('visible');
+            } else {
+                card.classList.remove('visible');
+            }
+        });
+    };
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+});
+// Projects Counter // 
+const proCount = document.createElement('p');
+proCount.innerText = `(${allCards.length})`
+proCount.style = "color:white; font-size: .7rem; position:absolute; top: 25%; right: 25px;";
+stickyTitle.insertBefore(proCount, stickyTitle.children[1]);

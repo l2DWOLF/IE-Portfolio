@@ -634,8 +634,10 @@ header {
     width: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-template-rows: repeat(auto-fill, 550px);
     justify-content: center;
     gap: 20px;
+    row-gap: 2em;
     padding: 5em 0 200px;
     height: 100%;
 }
@@ -651,7 +653,7 @@ header {
     align-items: center;
     gap: 0.2em;
     box-shadow: 0 5px 10px 2px black;
-    border: 1px solid rgb(251, 251, 251);
+    border: 1px solid rgba(251, 251, 251, 0.333);
     border-radius: 1em;
     overflow: hidden;
     transition: .6s;
@@ -710,7 +712,7 @@ header {
 }
 
 .projects-section h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: snow;
     
     max-width: 100vw;
@@ -1335,11 +1337,18 @@ header {
         gap: 2em !important;
         grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
         width: 90% !important;
+        row-gap: 3.5em !important;
     }
 
-    /* .cards-box {
-        min-height: 600px;
-    } */
+.cards-box.visible {
+    transform: scale(1.09);
+    opacity: 1;
+}
+.cards-box.visible p {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    transition: background 1.25s ease-in-out;
+}
 
     .cards-img-box {
         min-height: 30%;
