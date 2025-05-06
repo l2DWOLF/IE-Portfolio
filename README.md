@@ -7,7 +7,7 @@
 ## 🔧 Technologies & Tools
 
 - **Frontend**: React, Vite, Redux, Axios, Context API, Formik, Yup, Toastify, React Router  
-- **Backend**: Node.js, Express, MongoDB, JWT, Joi, bcryptjs, Mongoose, Morgan  
+- **Backend**: Node.js, Express, MongoDB, Django, PostgreSQL, JWT, Joi, bcryptjs, Mongoose, Morgan  
 - **Languages**: JavaScript, Python, C++   
 - **Tools**: Postman, Git, MongoDB Compass, MongoDB Atlas
 
