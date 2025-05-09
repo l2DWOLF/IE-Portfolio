@@ -64,7 +64,7 @@ allProjectsBtn.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.cards-box');
     const projectsSection = document.querySelector('.projects-section');
-    const offset = 400;
+    const offset = 300;
 
     function onScroll() {
         const sectionTop = projectsSection.getBoundingClientRect().top;
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         cards.forEach(card => {
             const cardTop = card.getBoundingClientRect().top;
             const cardBottom = card.getBoundingClientRect().bottom;
-            if (cardTop < window.innerHeight - offset && cardBottom > offset) {
+            if (cardTop < window.innerHeight - offset && cardBottom > 400) {
                 card.classList.add('visible');
             } else {
                 card.classList.remove('visible');
