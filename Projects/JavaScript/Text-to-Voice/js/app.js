@@ -98,7 +98,7 @@ resetBtn.addEventListener('click', () => {
 
 
 quoteBtn.addEventListener('click', () => {
-    await getQuote();
+    getQuote(); // fix
     textInput.value = `"..${theQuote}..."`;
     textInput.value += ` \n \nAuthor: "${theAuthor} " `;
     
