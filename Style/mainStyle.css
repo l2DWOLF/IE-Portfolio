@@ -461,8 +461,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30vw;
-    height: 30vw;
+    width: 25vw;
+    height: 25vw;
     padding: 2px;
     border-radius: 50%;
     z-index: 1;
@@ -477,8 +477,8 @@ header {
 .logo-img .logo-img-box::after {
     content: ' ';
     position: absolute;
-    width: 30vw;
-    height: 30vh;
+    width: 25vw;
+    height: 25vh;
     background: conic-gradient(transparent, transparent, transparent, var(--secondary));
     transform: rotate(0deg);
     animation: rotate-border 6s linear infinite;
@@ -960,7 +960,6 @@ header {
     font-weight: 500;
     margin-bottom: 30px;
     border-bottom: 1px solid #fff;
-    border-right:none;
     outline: none;
     background: transparent;
 }
@@ -971,12 +970,13 @@ header {
 
 .msg-label {
     bottom: 20px;
+
 }
 
 .contact-box .user-box label {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 30px;
     padding: 10px 0;
     font-size: 1em;
     font-weight: 600;
@@ -1163,7 +1163,6 @@ header {
     .nav-bar ul {
         display: flex;
         flex-direction: column;
-        background-color: var(--accent3);
         width: 100%;
         margin-top: 1em;
         position: relative;
@@ -1174,7 +1173,7 @@ header {
     }
 
     .checkbox-container {
-        flex-direction: column !important;
+        flex-direction: column;
         position: fixed;
         top: -110%;
         right: 0;
@@ -1191,19 +1190,42 @@ header {
         padding: 0.5em !important;
         display: flex;
         justify-content: center !important;
-        font-size: 1.6em !important;
+        font-size: 1.2em;
         color: var(--accent3) !important;
         background-color: var(--backcolor3);
-        border: 1px solid var(--backcolor1) !important;
-        box-shadow: 0 0 2px var(--secondary) !important;
-        border-bottom: unset !important;
+        box-shadow: unset;
+    }
+*{
+    /* border-radius: 7px; */
+}
+    .nav-bar ul {
+        gap: .4em;
+        margin-top: 25px;
+        background-color: #1f242d;
+        padding: 10px;
+    }
+
+    .nav-bar ul li {
+        border: unset;
+        border-bottom: 1px solid black;
+        gap: 8em;
+    }
+    .nav-bar ul li a { 
+        border-radius: 7px;
+
+    }
+    .nav-bar ul li:hover a{
+        border-bottom: unset;
+        
+    } 
+    .nav-bar ul li.active a{
+        border-bottom: unset;
     }
 
     .nav-bar ul li a:hover,
     .nav-bar ul li.active a:hover {
         background-color: var(--accent3);
         color: var(--backcolor3) !important;
-        border: 1px solid var(--backcolor3);
         box-shadow: 0 0 15px var(--secondary);
         transform: scale(1.05);
     }
