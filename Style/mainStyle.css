@@ -1207,12 +1207,15 @@ header {
 
     .nav-bar ul li {
         border: unset;
-        border-bottom: 1px solid black;
-        gap: 8em;
+
+    }
+    .nav-bar ul li:hover { 
+        width:80%;
+        align-self: center;
+        margin: 15px;
     }
     .nav-bar ul li a { 
         border-radius: 7px;
-
     }
     .nav-bar ul li:hover a{
         border-bottom: unset;
@@ -1226,8 +1229,7 @@ header {
     .nav-bar ul li.active a:hover {
         background-color: var(--accent3);
         color: var(--backcolor3) !important;
-        box-shadow: 0 0 15px var(--secondary);
-        transform: scale(1.05);
+        box-shadow: 0 0 5px var(--secondary);
     }
 
     .checkON,
