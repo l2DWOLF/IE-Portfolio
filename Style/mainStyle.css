@@ -1402,6 +1402,9 @@ header {
     /* <!-- ----@Media Contact Section--------------> */
         #contact-section {
             padding: 25px 20px 70px;
+            height: 85vh;
+            justify-content: center;
+            gap: 2em;
         }
 
         #contact-section p {
