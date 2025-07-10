@@ -375,7 +375,7 @@ header {
 }
 
 .home-info p {
-    width: 90%;
+    width: 75%;
     font-size: var(--fs-p);
     margin: 10px 0px 25px;
     visibility: hidden;
@@ -673,7 +673,7 @@ header {
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     border-radius: 2.2em;
-    border: 1px solid rgba(57, 255, 57, 0.586);
+    border: 1px solid rgba(0, 255, 255, 0.586);
 }
 
 .cards-box:hover h4,
@@ -1195,9 +1195,6 @@ header {
         background-color: var(--backcolor3);
         box-shadow: unset;
     }
-*{
-    /* border-radius: 7px; */
-}
     .nav-bar ul {
         gap: .4em;
         margin-top: 25px;
