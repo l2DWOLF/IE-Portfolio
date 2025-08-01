@@ -1,0 +1,50 @@
+
+.home-section{
+    padding: unset;
+    overflow: unset;
+}
+
+@media (min-width: 800px) {
+.projects-section {
+        width: 40%;
+    }
+
+    .projects-section img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.typing-text span::before {
+    content: "JavaScript";
+    color: #20606b;
+    animation: adjusted-words 15s infinite;
+}
+
+@keyframes adjusted-words {
+
+    0%,
+    20% {
+        content: "Django.";
+    }
+
+    21%,
+    40% {
+        content: "PostgreSQL.";
+    }
+
+    41%,
+    60% {
+        content: "Browsable API.";
+    }
+
+    61%,
+    80% {
+        content: "JWT.";
+    }
+
+    81%,
+    100% {
+        content: "Visual Studio.";
+    }
+}
