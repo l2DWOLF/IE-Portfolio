@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="js/input.js" defer></script>
+    <title>sc-task - input</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>SC - Task [Input]</h1>
+        <h2>Please enter your triangle values below</h2>
+
+        <div class="user-input">
+            <form class="triangle-form">
+            <div class="input-field">
+                <p>Top</p>
+                <label>X3:</label>
+                <input type="number" id="x3" min='0' max='800' required>
+                <label>Y3:</label>
+                <input type="number" id="y3" min='0' max='800' required>
+            </div>
+            <div class="input-field">
+                <p>Bottom Left</p>
+                <label>X1:</label>
+                <input type="number" id="x1" min='0' max='800' required>
+                <label>Y1:</label>
+                <input type="number" id="y1" min='0' max='800' required>
+            </div>
+            <div class="input-field">
+                <p>Bottom Right</p>
+                <label>X2:</label>
+                <input type="number" id="x2" min='0' max='800' required>
+                <label>Y2:</label>
+                <input type="number" id="y2" min='0' max='800' required>
+            </div>
+            <div class="dashboard">
+                <button type="submit" class="form-btn">Generate Triangle</button>
+                <button id="random-tri-btn" class="form-btn" type="button" onclick="window.location.href='display.html?random=true'">
+                    Random Triangle
+                </button>
+            </div>
+            </form>
+        </div>
+    </div>  
+</body>
+
+</html>

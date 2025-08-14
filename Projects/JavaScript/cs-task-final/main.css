@@ -1,0 +1,184 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica'; 
+    text-decoration: none;
+}
+
+body{
+    position: relative;
+    min-height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    overflow-x: auto;
+    background: black;
+    color: snow;
+
+    background-image: url('media/bg10.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 3px 5px black;
+}
+
+.wrapper{
+    background: rgba(0, 0, 0, 0.219);
+    min-height: 100cqh;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: auto;
+    align-items: center;
+    gap: 1em;
+    padding: 2em 0 1em;
+}
+.display-wrapper{
+    background: rgba(0, 0, 0, 0.219);
+    min-height: 100cqh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 2em 0 1em;
+}
+h1{
+    font-size: 2.5rem;
+    margin: .5em 0 0;
+}
+
+.display-container {
+    display: flex;
+    gap: 1em;
+    padding: 0 0 1em;
+}
+.display-container h2 {
+    position: absolute;
+    top: 2em;
+    left: center;
+}
+.display-js{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 255, 255, 0.412);
+    border: 1px solid rgb(0, 253, 0);
+    border-radius: 15px;
+
+    transform: 1s;
+}
+.display-css {
+    position: relative;
+    min-height: 800px;
+    min-width: 800px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 255, 42, 0.427);
+    border: 1px solid aqua;
+    border-radius: 15px;
+    transition: 1s;
+}
+.display-js h2 {
+    color: rgb(0, 253, 0);
+}
+.display-css h2 {
+    color: aqua;
+}
+.display-js, .display-css{
+    box-shadow: 0px 0px 10px 1px black;
+}
+.display-js:hover, .display-css:hover{
+    scale: 1.01 1;
+    margin: 0 1em;
+}
+
+.triangle-form{
+    width: 550px; 
+    height: 200px; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    font-size: 1.2rem;
+    background: rgba(0, 255, 255, 0.412);
+    border-radius: 15px;
+    border: 1px solid white;
+}
+
+.input-field{
+    width: 80%;
+    display: flex;
+    gap: 1em;
+    text-align: left;
+}
+.input-field p{
+    width: 50%;
+}
+.input-field input{
+    width: 25%;
+}
+.input-field label{
+    width: 25%;
+}
+
+.dashboard{
+    min-width: 350px;
+    min-height: 40px;
+    padding: .5em;
+    display: flex;
+    justify-content: space-between;
+    gap: .5em;
+}
+.form-btn{
+    padding: 5px 10px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: 1rem;
+    transition: .5s;
+}
+.form-btn:hover{
+    background:white;
+    border: 1px solid black;
+    color:black;
+    font-weight: 700;
+}
+
+.css-triangle{
+    height: 800px;
+    width: 800px;
+    background: snow;
+    clip-path: polygon(
+        var(--x1) var(--y1),
+        var(--x2) var(--y2),
+        var(--x3) var(--y3)
+    );
+}
+.css-angles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 800px;
+    pointer-events: none;
+}
+.css-angles span {
+    position: absolute;
+    color: yellow;
+    font-size: 16px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}
