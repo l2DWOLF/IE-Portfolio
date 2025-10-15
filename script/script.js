@@ -1,3 +1,13 @@
+import {initForm} from '../script/forms/formHandler.js'
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    initForm();
+});
+
+
+
 const stickyTitle = document.querySelector('.sticky-title');
 const allProjectsBtn = document.querySelector('#AP');
 const beBtn = document.querySelector('#BE');
@@ -25,7 +35,7 @@ let cardTypes = {
 const projectsTop = document.querySelector('.projects-section');
 
 function filterDisplay(type) {
-    if(type !== "all"){
+    if (type !== "all") {
         Object.values(cardTypes).forEach((cards) => {
             cards.forEach((card) => {
                 card.style.display = "none";
