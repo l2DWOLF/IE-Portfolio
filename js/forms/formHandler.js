@@ -73,7 +73,6 @@ function statusMessage(msg, type = "info"){
     const currentStatus = document.querySelector(".status");
 
     if(currentStatus){ currentStatus.remove(); };
-
     status.textContent = msg; 
     status.className = type === "error" ? "status error" : "status success"; 
     formContainer.appendChild(status);

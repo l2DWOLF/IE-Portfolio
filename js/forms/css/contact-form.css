@@ -27,7 +27,7 @@
 .contact-box form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1em;
+    gap: 1.2em .5em;
     width: 100%;
 }
 
@@ -58,7 +58,7 @@
 .contact-box .input-box label {
     position: absolute;
     top: 0;
-    left: 30px;
+    left: 10px;
     padding: 10px 0;
     font-size: 1em;
     font-weight: 600;
@@ -68,8 +68,8 @@
 }
 
 .contact-box .input-box input:focus~label {
-    top: -30px;
-    left: 0;
+    top: -28px;
+    left: 4px;
     color: var(--secondary);
     font-size: 0.9rem;
 }
@@ -230,6 +230,7 @@ form:valid .form-btn {
     .contact-box .input-box input {
         width: 100% !important;
         margin: 0px 0px 0px 0px;
+        font-size: 16px;
     }
 
     .contact-box form {

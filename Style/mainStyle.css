@@ -260,8 +260,8 @@ header {
 .home-section {
     display: flex;
     align-items: center;
-    min-height: 100vh;
-    padding: 5em 6% 100px;
+    min-height: calc(100vh - 75px);
+    padding: 1em 6%;
     gap: 5px;
     color: whitesmoke;
     visibility: hidden;
@@ -380,15 +380,24 @@ header {
     }
 }
 
+.intro-content{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0 1em 0em;
+    gap: .5em;
+}
+.mobile-intro-content{
+    display: none;
+}
+
 .home-info p {
-    width: 75%;
     font-size: var(--fs-p);
-    margin: 10px 0px 25px;
     visibility: hidden;
     opacity: 0;
     animation: show-content 1s linear forwards;
     animation-delay: 0.8s;
     transition: 0.5s;
+
 }
 .tech-stack{
     text-align-last: left;
@@ -545,7 +554,7 @@ header {
     flex-wrap: wrap;
     width: 100%;
     gap: 1em;
-    padding: 1em 0;
+    padding: 2em 0;
     justify-content: space-evenly;
     align-items: center;
     box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.138)
@@ -569,21 +578,28 @@ header {
 }
 
 .aside-item a {
-    min-width: 75px;
-    min-height: 75px;
+    min-width: 94px;
+    min-height: 94px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5px;
     border: 2px solid var(--secondary);
     border-radius: 50%;
     font-size: var(--fs-asidebtn);
     color: var(--secondary);
     background-color: var(--backcolor3);
-    box-shadow: 0 0 5px var(--secondary);
+    box-shadow: 0 0 5px 1px var(--secondary);
     transition: 0.5s;
     animation: spinner 3s linear infinite;
+
+}
+
+.aside-item a span{
+    font-size: 1rem;
+    overflow: visible;
+    max-width: 100cqw;
+
 }
 
 .aside-item a:hover{
@@ -704,7 +720,6 @@ header {
     height: 70px;
     z-index: 1 !important;
     border: 1px solid white;
-    overflow: hidden !important;
     background: #00000025;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.80);
     text-align: center;
@@ -713,6 +728,44 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    overflow: visible;
+}
+.btn-down{
+    min-width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 8em;
+    left: 2px;
+    padding: 0;
+    margin: 0;
+    font-size: var(--fs-scbtn);
+    color: var(--secondary);
+    transition: 0.5s;
+    transform: rotate(180deg);
+    z-index: 1;
+
+    padding: 0em 0em 0em 95%;
+    display: flex;
+
+}
+.btn-down a {
+    display: flex;
+    font-size: 3.5rem;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    opacity: 0.3;
+}
+.btn-down:hover,
+.btn-down a:hover {
+    color: var(--backcolor1);
+    border-radius: 50%;
+    opacity: 1;
+}
+.btn-down a:hover {
+    animation-delay: .5s;
+    color: rgb(255, 255, 255) !important;
+    z-index: 0;
 }
 
 .projects-menu{
@@ -893,6 +946,12 @@ header {
 #about-section h2 {
     font-size: var(--fs-h2);
     color: var(--secondary);
+}
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
 }
 
 #about-section p {
@@ -1192,17 +1251,28 @@ header {
     .logo-img-box::before,
     .logo-img-box::after {
         padding: 2px !important;
-        width: 50vw !important;
-        height: 50vw !important;
+        width: 30vw !important;
+        height: 30vw !important;
+    }
+
+    .intro-content{
+    padding: 1em 0 1em .5em;
+    }
+
+    .mobile-intro-content{
+        display: unset;
     }
 
     .home-info p {
         text-align: left;
-        width: 95%;
+    }
+
+    .full-intro-content{
+        display: none;;
     }
 
     .tech-stack {
-        text-align-last: left;
+        text-align: left;
         font-size: .75rem !important;
     }
 
@@ -1253,23 +1323,25 @@ header {
     
     .aside-item a {
         min-width: 50px;
-        
         min-height: 75px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 5px;
+        padding: 0px;
         border: unset;
         border-radius: 50%;
-        font-size: var(--fs-asidebtn);
+        font-size: 2.5rem;
         color: var(--secondary);
         background-color: unset;
         box-shadow: unset;
         transition: 0.5s;
         animation: spinner 3s linear infinite;
         overflow: visible;
-/*         outline: 1px solid red; */
+    }
+
+    .aside-item a span {
+        font-size: .8rem;
     }
     
     .aside-item a:hover {
@@ -1439,8 +1511,8 @@ header {
 
     /* <!-- ----@Media Scroll-up Button-------------> */
     .btn-up {
-        right: 0.2em !important;
-        bottom: 1em !important;
+        right: 0.5em !important;
+        bottom: 1.25em !important;
     }
 
     .btn-up a {
@@ -1448,6 +1520,24 @@ header {
         opacity: 0.7 !important;
     }
 
+    .btn-down {
+        min-width: 100%;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 8em;
+        left: 2px;
+        padding: 0;
+        margin: 0;
+        font-size: var(--fs-scbtn);
+        color: var(--secondary);
+        transition: 0.5s;
+        transform: rotate(180deg);
+        z-index: 1;
+
+        padding: 0em 0em 0em 85%;
+        display: flex;
+
+    }
     /* <!-- ----@Media Scroll-up Button End---------> */
 
     /* <!-- ----@Media Footer-----------------------> */

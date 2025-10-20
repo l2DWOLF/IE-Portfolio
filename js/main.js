@@ -1,4 +1,4 @@
-import {initForm} from '../script/forms/formHandler.js'
+import {initForm} from './forms/formHandler.js'
 
 
 document.addEventListener('DOMContentLoaded', () => {

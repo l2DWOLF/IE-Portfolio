@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/mainStyle.css">
-    <link rel="stylesheet" href="./script/forms/css/contact-form.css">
+    <link rel="stylesheet" href="./js/forms/css/contact-form.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="apple-touch-icon" sizes="180x180" href="Media/IE-Favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="Media/IE-Favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="Media/IE-Favicon/favicon-16x16.png">
     <link rel="manifest" href="Media/IE-Favicon/site.webmanifest">
-    <script type="module" src="script/script.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
 
     <title>IE Portfolio - Full Stack Portfolio</title>
 </head>
@@ -66,32 +66,48 @@
                 <h3 class="typing-text">
                     I'm a <span></span>
                 </h3>
-                <p>
-                    My passion for problem-solving and continuous learning led me to the dynamic world of full-stack development.
-                    <br/> <br/>
-                    I'm focused on building scalable, reusable systems with emphasis on user experience. 
-                    
-                    Always seeking new challenges and continuously refining my skills - pushing the boundaries of what I can build. 
-                </p>
+
+                <div class="intro-content">
+                    <p class="mobile-intro-content">
+                        Full-stack developer with hands-on experience in React, Django, and Node.js, building scalable, secure web applications that emphasize clean architecture, performance, edge-cases and user experience.
+                    </p>
+                    <p class="mobile-intro-content">
+                        Applying strategic thinking to software development, writing clean, reusable code and continuously improving performance, usability, and system architecture.
+                    </p>
+                    <p class="full-intro-content">
+                        Full-stack developer with hands-on experience in React, Django, and Node.js, building scalable, secure web applications
+                        that emphasize clean architecture, performance, edge-cases and user experience. 
+                    </p>
+                    <p class="full-intro-content">
+                        Strong foundation in software
+                        engineering principles and system design, reinforced by self-taught studies in C++ (OOP) and computer science
+                        fundamentals. Applying strategic thinking to software development, writing clean, reusable code and continuously
+                        improving performance, usability, and system architecture.
+                    </p>
+                </div>
+
                 <p class="tech-stack">
                     <span>Languages:</span>
-                    JS, Python, C++
+                    JS, Python, C++ (OOP), SQL / NoSQL.
                     <br />
                     <span>Frontend:</span>
-                    React, Vanilla JS, Redux, Axios, Formik, Yup.
+                    React, Vanilla JS, Redux, Axios, Formik, CSS.
                     <br />
                     <span>Backend:</span> 
-                    Node.js, Express, JWT, Bcrypt, Helmet, Joi.
+                    Node.js, Express, DRF,  Bcrypt, Helmet, Joi.
                     <br/>
                     <span>Database:</span>
-                    MongoDB, SQL, Django ORM-DRF.
+                    MongoDB, PostgreSQL, Django ORM.
                     <br />
                     <span>Utilities:</span> 
-                    Vite, Git, ESLint, Postman. 
+                    Git, Vite, ESLint, Postman, Render, SendGrid.
+                    <br/> 
+                    <span>Auth & Validation:</span> 
+                    Yup, Joi, JWT, Regex.  
                     <br/> 
                 </p>
                 <div class="social-icons"> <!-- --Social Icons-- -->
-                    <a href="Files/Idan Elimeleh - CV.pdf" class="btn-type-1" download>Download CV</a>
+                    <a href="Files/Idan-Elimeleh-CV.pdf" class="btn-type-1" download>Download CV</a>
                     <div class="social-icons-box">
                         <a href="https://github.com/l2dwolf" target="_blank"><i class='bx bxl-github'></i></a>
                         <a href="https://www.linkedin.com/in/idan-elimeleh-itegroupnyc" target="_blank"><i
@@ -135,13 +151,16 @@
             <div class="sticky-title">
                 <h2>Projects</h2>
                 <div class="projects-menu">
-                    <p id="AP" class="projects-filter"> [All] </p>
-                    <p id="RP" class="projects-filter"> [Frontend] </p>
-                    <p id="BE" class="projects-filter"> [Backend] </p>
-                    <p id="JSP" class="projects-filter">[JS] </p>
+                    <p id="AP" class="projects-filter">[All]</p>
+                    <p id="RP" class="projects-filter">[Frontend]</p>
+                    <p id="BE" class="projects-filter">[Backend]</p>
+                    <p id="JSP" class="projects-filter">[JS]</p>
                     <p id="PYP" class="projects-filter">[Python]</p>
-                    <p id="LPP" class="projects-filter">[WEB] </p>
+                    <p id="LPP" class="projects-filter">[WEB]</p>
                 </div>
+            </div>
+            <div class="btn-down">
+                <a href="#about-section"><i class='bx bx-chevrons-up'></i></a>
             </div>
 
             <div class="cards-container"><!-- --Cards Container-- -->
@@ -455,17 +474,26 @@
                 </div>
             </div>
             </div>
-            <p>
-                With a strong foundation in leadership and results-driven strategy from my time in Manhattan's competitive real estate
-                market, I bring a unique blend of business acumen and technical expertise to software development.
-                <br><br>
-                My transition into tech was driven by a love of problem-solving and a desire to build tools that make a difference.
-                Through immersive training in an academic full-stack course and hands-on projects with modern web technologies, I’ve developed
-                a strong focus on clean, reusable code, system design, scope, performance and usability.
-                <br><br>
-            </p>
+            <div class="about-content">
+                <p>
+                    With a background in leadership and strategy from Manhattan’s fast-paced real estate world, I bring a business-savvy
+                    mindset and a sharp focus on results to software development.
+                </p>
+                <p>
+                    Driven by a passion for problem-solving and a desire to build tools that matter, I made a deliberate transition into
+                    tech. Since then, I’ve immersed myself in full-stack development - working with modern frameworks like React,
+                    Django,
+                    and Node.js to build scalable, secure applications with clean architecture and thoughtful user experiences.
+                </p>
+                <p>
+                    My approach combines a solid foundation in computer science fundamentals (including C++ and OOP) with practical,
+                    hands-on experience across the stack. I emphasize clean, reusable code, performance, and system design - always
+                    considering edge cases and usability.
+                </p>
+            </div>
+            
             <div class="social-icons"> <!-- --Social Icons-- -->
-                <a href="Files/Idan Elimeleh - CV.pdf" class="btn-type-1" id="btn-contact" download>Download CV</a>
+                <a href="Files/Idan-Elimeleh-CV.pdf" class="btn-type-1" id="btn-contact" download>Download CV</a>
             </div>
         </section>
         <!-- --------------About Section End-------------- -->
@@ -544,7 +572,7 @@
         <!-- --------------Contact Section End-------------- -->
         <!-- top button -->
         <div class="btn-up">
-            <a href="#"><i class='bx bx-chevrons-up'></i></box-icon></a>
+            <a href="#"><i class='bx bx-chevrons-up'></i></a>
         </div>
         <!-- top button -->
     </main>
