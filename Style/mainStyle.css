@@ -967,6 +967,7 @@ header {
 
 /* <!-- ----Contact Section----------------> */
 #contact-section {
+    position: relative;
     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642);
     min-height: 75vh;
     padding: 50px 25px 50px 25px;
@@ -977,11 +978,79 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    overflow: hidden;
+}
+
+.anchor-div{
+    position: absolute;
+    top: -100px;
+}
+.deco-lines-container{
+    min-width: 400px;
+    min-height: 400px; 
+    position: relative;
+    animation: patrol-rotation 27s linear infinite;
+}
+.deco-line{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+
+    border-top: 1px solid #00fbff;
+    animation: border-patrol 9s linear infinite;
+}
+
+
+@keyframes border-patrol {
+    0%{
+        top: 420px;
+        left: -150px;
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+    25%{
+        opacity: 0.2;
+        
+    }
+    50%{
+        opacity: 0.6;
+        border-bottom: 1px solid #00fbff;
+        border-left: 1px solid #00fbff;
+    }
+    75%{
+        border-right: 1px solid #00fbff;
+    }
+    90%{
+        opacity: 0;
+        border-bottom: 1px solid #00fbff;
+    }
+    100%{
+        height: 150px;
+        width: 150px;
+        opacity: 0;
+        transform: rotate(30deg) skew(30deg, 20deg);;
+        left: 800px;
+        box-shadow: 0px 0px 10px 1px #00fbff;
+    }
+}
+@keyframes patrol-rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+
 }
 
 #contact-section h2 {
     font-size: var(--fs-h2);
     color: var(--accent3);
+    z-index: 1;
 }
 
 #contact-section p {
@@ -1331,7 +1400,7 @@ header {
         padding: 0px;
         border: unset;
         border-radius: 50%;
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         color: var(--secondary);
         background-color: unset;
         box-shadow: unset;
@@ -1346,7 +1415,7 @@ header {
     
     .aside-item a:hover {
         
-        color: var(--backcolor3);
+        color: snow;
         box-shadow: unset;
         transform: scale(1.0001) translateY(-5%) !important;
     }
@@ -1474,7 +1543,7 @@ header {
     /* <!-- ----@Media Contact Section--------------> */
         #contact-section {
             padding: 2em 20px 70px 20px;
-            height: 85vh;
+            min-height: calc(100vh - 100px);
             justify-content: center;
             gap: 2em;
         }
