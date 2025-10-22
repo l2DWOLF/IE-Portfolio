@@ -110,7 +110,7 @@ function generateSquare(totalLines){
 
             line.style.animationDelay = `${(i) * 0.2}s`;
             linesContainer.appendChild(line);
-        }, i * 300);
+        }, i * 25);
         
     };
 };
