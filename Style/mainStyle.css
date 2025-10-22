@@ -985,12 +985,14 @@ header {
 .anchor-div{
     position: absolute;
     top: -100px;
+    animation: z-control 25s linear infinite;
+
 }
 .deco-lines-container{
     min-width: 400px;
     min-height: 400px; 
     position: relative;
-    animation: patrol-rotation 27s linear infinite;
+    animation: patrol-rotation 30s linear infinite;
 }
 .deco-line{
     position: absolute;
@@ -1001,16 +1003,24 @@ header {
     opacity: 0;
 
     border-top: 1px solid #00fbff;
-    animation: border-patrol 9s linear infinite;
+    animation: border-patrol 6s linear infinite;
 }
 
+@keyframes z-control{
+    0%{
+        transform: rotate3d(0, 0, 0, 0);
+    }
+    100%{
+        transform: rotate3d(1, 0, 0, 360deg);
 
+    }
+}
 @keyframes border-patrol {
     0%{
         top: 420px;
         left: -150px;
         opacity: 0;
-        transform: rotate(90deg);
+        transform: rotate(90deg) translateZ(400px);
     }
     25%{
         opacity: 0.2;
@@ -1032,7 +1042,7 @@ header {
         height: 150px;
         width: 150px;
         opacity: 0;
-        transform: rotate(30deg) skew(30deg, 20deg);;
+        transform: rotate(30deg) skew(30deg, 20deg) translateZ(0px);
         left: 800px;
         box-shadow: 0px 0px 10px 1px #00fbff;
     }

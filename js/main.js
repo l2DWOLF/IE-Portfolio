@@ -100,14 +100,22 @@ proCount.style = "color:white; font-size: .7rem; position:absolute; top: 25%; ri
 stickyTitle.insertBefore(proCount, stickyTitle.children[1]);
 
 const linesContainer = document.querySelector(".deco-lines");
-const totalLines = 5;
-for(let i = 0; i < totalLines; i++){
-    const line = document.createElement('div');
-    line.className = "deco-line";
+function generateSquare(totalLines){
+    for (let i = 0; i < totalLines; i++) {
+        setTimeout(() => {
+            const line = document.createElement('div');
+            line.className = "deco-line";
 
-    line.style.padding = `${(i * 1)}px`
+            line.style.padding = `${(i * 1)}px`
 
-    line.style.animationDelay = `${(i) * 0.2}s`;
-
-    linesContainer.appendChild(line);
+            line.style.animationDelay = `${(i) * 0.2}s`;
+            linesContainer.appendChild(line);
+        }, i * 300);
+        
+    };
 };
+generateSquare(5);
+
+
+
+
