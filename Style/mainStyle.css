@@ -35,7 +35,7 @@
     --fs-navli: 1.4rem;
     --fs-rebtn: 1rem;
     --fs-scbtn: 1.2rem;
-    --fs-asidebtn: 2.8rem;
+    --fs-asidebtn: 2.1rem;
     --fs-btn-cards: 1rem;
 }
 
@@ -268,11 +268,13 @@ header {
     opacity: 0;
     animation: show-content 1s linear forwards;
     animation-delay: 0.5s;
+    position: relative;
 }
 
 .home-info {
     display: flex;
     flex-direction: column;
+
 }
 
 .home-info h1 {
@@ -578,8 +580,10 @@ header {
 }
 
 .aside-item a {
-    min-width: 94px;
-    min-height: 94px;
+    min-width: 80px;
+    max-width: 80px;
+    min-height: 80px;
+    max-height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -596,7 +600,7 @@ header {
 }
 
 .aside-item a span{
-    font-size: 1rem;
+    font-size: .8rem;
     overflow: visible;
     max-width: 100cqw;
 
@@ -732,7 +736,6 @@ header {
     overflow: visible;
 }
 .btn-down{
-    min-width: 100%;
     position: -webkit-sticky;
     position: sticky;
     top: 8em;
@@ -747,7 +750,34 @@ header {
 
     padding: 0em 0em 0em 95%;
     display: flex;
-
+}
+.home-btn-down{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 8em;
+    left: 50%;
+    right: 50%;
+    padding: 0;
+    margin: 0;
+    font-size: var(--fs-scbtn);
+    color: var(--secondary);
+    transition: 0.5s;
+    transform: rotate(180deg);
+    z-index: 1;
+    display: flex;
+}
+.home-btn-down a{
+    display: flex;
+    font-size: 3.5rem;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    opacity: 0.7;
+}
+.home-btn-down:hover,
+.home-btn-down a:hover {
+    animation-delay: .5s;
+    color: rgb(255, 255, 255) !important;
+    z-index: 0;
 }
 .btn-down a {
     display: flex;
@@ -1306,6 +1336,10 @@ header {
         height: 100% !important;
         padding: 5% 2% 5% 2% !important;
         overflow: hidden;
+    }
+
+    .home-btn-down{
+        display: none;
     }
 
     .home-info {
