@@ -62,7 +62,6 @@ body::after {
     animation: fade2 43s infinite;
 }
 
-/* Animations */
 @keyframes fade1 {
 
     0%,
@@ -109,7 +108,7 @@ body::after {
     padding: .8rem;
     width: 100%;
     max-width: 600px;
-    height: 90vh;
+    height: 50vh;
 
     display: flex;
     flex-direction: column;
@@ -232,7 +231,7 @@ img {
 
     font-size: 1rem;
     color: white;
-    text-align: right;
+    text-align: left;
 }
 
 #temp {
@@ -253,6 +252,7 @@ img {
 @media (max-width: 600px) {
 
     .wrapper {
+        height: 80vh;
         padding: 1.5rem;
     }
 
