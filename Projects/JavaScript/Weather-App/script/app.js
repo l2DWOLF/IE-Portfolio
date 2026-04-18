@@ -17,7 +17,6 @@ async function getWeather(city) {
     try {
         const response = await fetch(URL + city);
         const data = await response.json();
-        console.log(data);
         
         displayWeather(data);
     } catch (error) {
@@ -27,6 +26,7 @@ async function getWeather(city) {
 
 function displayWeather(weatherData) {
     if (weatherData.cod === 200) {
+        img.style.display = "unset";
         img.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
         img.classList.add("w-img");
         let tempa = Math.round(weatherData.main.temp); 
@@ -52,11 +52,14 @@ function displayWeather(weatherData) {
         temp.innerText = "";
         description.innerText = "";
         feels.innerText = "";
+        humidity.innerText = "";
         img.src = "";
+        img.style.display = "none";
     }
 }
 getWeather("New York");
 
-button.addEventListener("click", () => {
+button.addEventListener("click", (e) => {
+    e.preventDefault();
     getWeather(query.value);
 });
