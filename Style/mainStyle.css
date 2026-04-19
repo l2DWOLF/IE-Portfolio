@@ -21,18 +21,18 @@
     --accent3: #94accb;
     --lightpurpleTrans: rgba(55, 7, 67, 0.162);
 
-    --fs-h1: 4.5rem;
-    --fs-h1-span: 5rem;
-    --fs-h2: 3.5rem;
-    --fs-h3: 2rem;
+    --fs-h1: 3.2rem;
+    --fs-h1-span: 3.5rem;
+    --fs-h2: 3rem;
+    --fs-h3: 1.8rem;
     --fs-h4: 1.4rem;
     --fs-h5: 0.8rem;
     --fs-h6: 0.6rem;
     --fs-p: 1.25rem;
 
     --fs-icon-text: 0.65rem;
-    --fs-navlogo: 2rem;
-    --fs-navli: 1.4rem;
+    --fs-navlogo: 1.7rem;
+    --fs-navli: 1.2rem;
     --fs-rebtn: 1rem;
     --fs-scbtn: 1.2rem;
     --fs-asidebtn: 2.1rem;
@@ -81,10 +81,6 @@ header {
     text-decoration: none;
 }
 
-.nav-bar i {
-    color: white;
-    font-size: 3em;
-}
 
 .nav-bar img {
     width: 50px;
@@ -912,7 +908,7 @@ header {
     font-weight: 600;
     transition: .5s;
     align-self: center !important;
-    width: 70%;
+    width: 50%;
     text-align: center;
 }
 
@@ -1499,7 +1495,7 @@ header {
         min-width: 100%;
         overflow: hidden;
         border: none;
-        height: 70px;
+        height: 60px;
     }
 
     .projects-menu {
@@ -1524,7 +1520,7 @@ header {
 
     .projects-section h2 {
         min-width: 100%;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .projects-section p {
