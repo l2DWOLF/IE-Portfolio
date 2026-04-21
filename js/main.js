@@ -1,12 +1,9 @@
 import {initForm} from './forms/formHandler.js'
 
-
 document.addEventListener('DOMContentLoaded', () => {
 
     initForm();
 });
-
-
 
 const stickyTitle = document.querySelector('.sticky-title');
 const allProjectsBtn = document.querySelector('#AP');
@@ -33,7 +30,6 @@ let cardTypes = {
 };
 
 const projectsTop = document.querySelector('.projects-section');
-
 function filterDisplay(type) {
     if (type !== "all") {
         Object.values(cardTypes).forEach((cards) => {
@@ -98,7 +94,7 @@ const proCount = document.createElement('p');
 proCount.innerText = `(${allCards.length})`
 proCount.style = "color:white; font-size: .7rem; position:absolute; top: 25%; right: 25px;";
 stickyTitle.insertBefore(proCount, stickyTitle.children[1]);
-
+// Deco Lines // 
 const linesContainer = document.querySelector(".deco-lines");
 function generateSquare(totalLines){
     for (let i = 0; i < totalLines; i++) {
@@ -116,6 +112,106 @@ function generateSquare(totalLines){
 };
 generateSquare(5);
 
+// cards parrallax effect//
+document.querySelectorAll('.cards-box').forEach(card => {
+    const strength = 6; 
 
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
 
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -strength;
+        const rotateY = ((x - centerX) / centerX) * strength;
+
+        card.style.transform = `
+            perspective(1000px)
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+            translateY(-4px)
+        `;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = `
+            perspective(1000px)
+            rotateX(0deg)
+            rotateY(0deg)
+            translateY(0px)
+        `;
+    });
+});
+
+// Typing Animation //
+const commands = [
+    "Full-Stack Developer",
+    "Real Estate Veteran",
+    "Musician",
+    "Team Player",
+    "Good Hire :)"
+];
+
+const output = document.querySelector(".terminal-text");
+const cursor = document.querySelector(".cursor");
+
+let commandIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeLoop() {
+    const current = commands[commandIndex];
+
+    if(!isDeleting){
+        output.textContent = current.substring(0, charIndex + 1);
+        output.appendChild(cursor);
+        charIndex++;
+
+        if (charIndex === current.length){
+            isDeleting = true;
+            setTimeout(typeLoop, 1500);
+            return;
+        };
+
+        setTimeout(typeLoop, 60 + Math.random() * 40);
+    } else {
+        output.textContent = current.substring(0, charIndex - 1);
+        output.appendChild(cursor);
+        charIndex--;
+
+        if(charIndex === 0){
+            isDeleting = false;
+            commandIndex = (commandIndex + 1) % commands.length;
+            setTimeout(typeLoop, 400);
+            return;
+        };
+        setTimeout(typeLoop, 30);
+    };
+};
+typeLoop();
+
+// tech-stack animation // 
+const lines = document.querySelectorAll(".tech-line");
+const techSection = document.querySelector(".tech-stack");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+            lines.forEach((line, i) => {
+                setTimeout(() => {
+                    line.classList.add("show");
+                }, i * 240); 
+            });
+            observer.unobserve(techSection);
+        };
+    });
+}, {
+    root: null,
+    threshold: 0,
+    rootMargin: "-40% 0px -40% 0px"
+});
+observer.observe(techSection);
