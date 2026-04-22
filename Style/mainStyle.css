@@ -135,6 +135,7 @@ header {
 .nav-bar img {
     width: 40px;
     height: 40px;
+    color: pink !important;
 }
 .nav-bar .logoImage {
     font-size: var(--fs-navlogo);
@@ -145,8 +146,8 @@ header {
 
 .nav-bar .logoImage:hover {
     transform: scale(1.05) translateY(-2%);
-    border-bottom: 2px solid var(--accent3);
-    color: var(--accent3);
+    border-bottom: 1px solid var(--accent3);
+    color: var(--secondary);
 }
 
 .nav-bar ul {
@@ -199,9 +200,8 @@ header {
     width: 100%;
     height: 100%;
     background: var(--backcolor2);
-
     transform: translateY(-100%);
-    animation: show-bars .7s ease-in forwards;
+    animation: show-bars .5s ease-in forwards;
     animation-delay: calc(.07s * var(--i));
     opacity: 1;
 
@@ -317,11 +317,10 @@ header {
 
 .cursor {
     display: inline-block;
-    width: 2px;
     height: 1.1em;
-
-    background: #00e1ff;
-    box-shadow: 0 0 8px rgba(0, 224, 255, 0.6);
+    width: 2px;
+    color: #00e1ff;
+    font-weight: 500;
 
     animation: blink 0.8s infinite;
     transform: translateY(2px);
@@ -474,7 +473,7 @@ header {
 
 .logo-img {
     transition: 2s;
-    opacity: 0.5;
+    opacity: 0.6;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -550,7 +549,11 @@ header {
 /* <!-- ----Aside Bar---------------> */
 #aside-bar {
     background: var(--backcolor2);
-    min-height: 100px;
+    background: linear-gradient(to top,
+                rgba(255, 255, 255, 0.12),
+                #242b37,
+                transparent 80%);
+    min-height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -560,8 +563,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    gap: 1em;
-    padding: 2em 0;
+    gap: .2em;
     justify-content: space-evenly;
     align-items: center;
     box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.138)
@@ -571,7 +573,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
     cursor: pointer;
 }
 
@@ -580,7 +581,6 @@ header {
     color:snow;
 }
 .aside-item:hover span{
-    color: var(--backcolor3);
     font-weight: bold;
 }
 
@@ -593,15 +593,10 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--secondary);
     border-radius: 50%;
     font-size: var(--fs-asidebtn);
     color: var(--secondary);
-    background-color: var(--backcolor3);
-    box-shadow: 0 0 5px 1px var(--secondary);
     transition: 0.5s;
-    animation: spinner 3s linear infinite;
-
 }
 
 .aside-item a span{
@@ -612,49 +607,14 @@ header {
 }
 
 .aside-item a:hover{
-    background-color: var(--secondary);
-    color: var(--backcolor3);
-    border: 2px solid var(--backcolor3);
-    box-shadow: 0 0 5px var(--secondary);
-    transform: scale(1.1) translateY(-5%) !important;
+    color: rgb(187, 187, 187);
+    transform: scale(1.05) translateY(-5%) !important;
 }
 
 .aside-item i {
-    animation: inner-spinner 6s linear infinite;
-    transition: .5s;
+    transition: .5s ease;
 }
 
-@keyframes spinner {
-
-    21%,
-    100% {
-        transform: rotate3d(0.021, 1, 0, 340deg);
-    }
-
-    0% {
-        transofrm: rotate3d(0, 0, 0, 0);
-    }
-
-    10% {
-        transofrm: rotate3d(0, 0, 0, 0);
-    }
-}
-
-@keyframes inner-spinner {
-
-    20%,
-    100% {
-        transform: rotate3d(0.021, 1, 0, -340deg);
-    }
-
-    0% {
-        transofrm: rotate3d(0, 0, 0, 0);
-    }
-
-    10% {
-        transofrm: rotate3d(0, 0, 0, 0);
-    }
-}
 
 /* <!-- ----Aside Bar End-----------> */
 
@@ -714,7 +674,13 @@ header {
     isolation: isolate;
     transform-style: preserve-3d;
     cursor: pointer;
-    
+    opacity: 0;   
+    transform: translateY(60px);
+    transition: all 2.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cards-box.appear {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 .cards-box::before,
@@ -964,17 +930,21 @@ header {
     margin: .2em 0 .5em;
     bottom: 5px;
     padding: 0.3em 0em;
-    background: transparent;
-    border: 1px solid var(--secondary);
+
     border-radius: 4px;
     box-shadow: 0 0 4px 3px#b8f3ff1f;
     font-size: var(--fs-btn-cards);
-    color: var(--secondary);
+    
     font-weight: 600;
     transition: .5s;
     align-self: center !important;
     width: 50%;
     text-align: center;
+
+    background: rgba(27, 89, 102, 0.25);
+    border-color: rgba(184, 243, 255, 0.25);
+    color: var(--secondary);
+    border: 1px solid var(--backcolor1);
 }
 .cards-btn::before {
     content: "";
@@ -992,14 +962,15 @@ header {
 .cards-btn:hover {
     background: #b8f3ffd4;
     color: aqua !important;
-    border: 1px solid var(--secondary) !important;
+    
+        background: transparent;
 }
 
 .cards-box:hover .cards-btn {
     background: rgba(27, 89, 102, 0.25);
     border-color: rgba(184, 243, 255, 0.25);
-    color: var(--secondary) ;
-    border: 1px solid var(--backcolor1) ;
+    color: var(--secondary);
+    border: 1px solid #b8f3ff9c;
     transform: scale(1.02) translateY(5%);
     box-shadow: 0 0 1px 1px#b8f3ff59;
 }
@@ -1009,6 +980,10 @@ header {
 /* <!-- ----About Section----------------> */
 #about-section {
     background: var(--backcolor3);
+    background: linear-gradient(to top,
+                rgba(0,0,0, 0.12),
+                #2e4057 90%);
+
     font-family: poppins, sans-serif;
     padding: 50px 25px 50px 25px;
     gap: 1.5em;
@@ -1069,17 +1044,22 @@ header {
 /* <!-- ----Contact Section----------------> */
 #contact-section {
     position: relative;
-    box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642);
+    box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.02);
     min-height: 75vh;
     padding: 50px 25px 50px 25px;
     gap: 2em;
     background: var(--backcolor2);
+
+    background: linear-gradient(to bottom,
+                rgba(0,0,0, 0.12),
+                #1e1e1e 60%);
+    
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    border-top: 1px solid black;
     overflow: hidden;
 }
 
@@ -1160,14 +1140,14 @@ header {
 
 #contact-section h2 {
     font-size: var(--fs-h2);
-    color: var(--accent3);
+    color: var(--secondary);
     z-index: 1;
 }
 
 #contact-section p {
     color: whitesmoke;
     font-size: var(--fs-p);
-    font-weight: 700;
+    font-weight: 500;
     text-align: justify;
     padding-left: 25%;
     padding-right: 25%;
@@ -1232,11 +1212,16 @@ header {
 
 /* <!-- ----Footer--------------------------> */
 #footer {
-    background: var(--accent3);
+    background: linear-gradient(to right,
+                #1e1e1e,
+                rgba(0, 0, 0, 0.35) 40%,
+                rgba(0, 0, 0, 0.6) 100%);
+    border-color: rgba(0, 0, 0, 0.25);
     display: flex;
     padding: 0.3em 1em;
     justify-content: space-between;
     text-align: center;
+    color: snow;
 }
 
 #footer h5 {
@@ -1291,9 +1276,14 @@ header {
         height: 60px;
     }
 
+    .nav-bar .logoImage{
+        font-size: 1.2rem;
+    }
+
     .nav-bar ul {
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 90%;
         margin-top: 1.2em;
         position: relative;
@@ -1329,12 +1319,13 @@ header {
     }
 
     .nav-bar ul li a {
-        width: 100%;
+        min-width: 70cqw;
         height: auto;
         padding: 0.5em !important;
         display: flex;
         justify-content: center !important;
         font-size: 1.1em;
+        font-weight: 600;
         color: rgba(184, 243, 255, 0.85) !important;
         
             background: rgba(15, 25, 30, 0.4);
@@ -1499,7 +1490,7 @@ header {
     }
 
     #aside-bar {
-        background: var(--backcolor2);
+        /* background: var(--backcolor2); */
         min-height: 100px;
         display: flex;
         justify-content: center;
@@ -1558,13 +1549,6 @@ header {
 
     .aside-item a span {
         font-size: .8rem;
-    }
-    
-    .aside-item a:hover {
-        
-        color: snow;
-        box-shadow: unset;
-        transform: scale(1.0001) translateY(-5%) !important;
     }
     
     .aside-item i {
@@ -1635,6 +1619,7 @@ header {
     }
 
     .cards-container {
+        padding: 2em .5em 5em;
         grid-template-columns: repeat(auto-fit, minmax(200px, 275px));
         grid-template-rows: repeat(auto-fill, 400px);
         width: 90% !important;
@@ -1646,14 +1631,21 @@ header {
     max-height:390px;
     padding: unset !important;
     row-gap: 0em;
-}
 
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 2.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cards-box.appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
 .cards-box.visible {
-    transform: scale(1.09);
+    transform: scale(1.02);
     border-radius: 2.2em;
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
-    border: 1px solid var(--secondary);
+    border: 1px solid rgba(0, 255, 255, 0.286);
     opacity: 1;
 }
 .cards-box.visible p {
@@ -1662,10 +1654,10 @@ header {
     transition: background 1.25s ease-in-out;
 }
 
-    .cards-img-box {
-        min-height: 30%;
-        max-height: 30%;
-    }
+.cards-img-box {
+    min-height: 30%;
+    max-height: 30%;
+}
     /* <!-- ----@Media Projects Section End----------> */
 
     /* <!-- ----@Media About Section--------------> */
@@ -1697,6 +1689,10 @@ header {
             min-height: calc(100vh - 100px);
             justify-content: center;
             gap: 2em;
+        }
+
+        #contact-section h2{
+            font-size: 1.5rem !important;
         }
 
         #contact-section p {
@@ -1762,7 +1758,7 @@ header {
 
     /* <!-- ----@Media Footer-----------------------> */
     #footer h5 {
-        font-size: var(--fs-h5);
+        font-size: .7rem;
     }
 
     #footer h6 {

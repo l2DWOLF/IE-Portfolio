@@ -114,7 +114,7 @@ generateSquare(5);
 
 // cards parrallax effect//
 document.querySelectorAll('.cards-box').forEach(card => {
-    const strength = 6; 
+    const strength = 8; 
 
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -129,7 +129,7 @@ document.querySelectorAll('.cards-box').forEach(card => {
         const rotateY = ((x - centerX) / centerX) * strength;
 
         card.style.transform = `
-            perspective(1000px)
+            perspective(1200px)
             rotateX(${rotateX}deg)
             rotateY(${rotateY}deg)
             translateY(-4px)
@@ -138,7 +138,7 @@ document.querySelectorAll('.cards-box').forEach(card => {
 
     card.addEventListener('mouseleave', () => {
         card.style.transform = `
-            perspective(1000px)
+            perspective(1200px)
             rotateX(0deg)
             rotateY(0deg)
             translateY(0px)
@@ -212,6 +212,25 @@ const observer = new IntersectionObserver((entries) => {
 }, {
     root: null,
     threshold: 0,
-    rootMargin: "-40% 0px -40% 0px"
+    rootMargin: "-20% 0px -20% 0px"
 });
 observer.observe(techSection);
+
+// Cards Appear Animation // 
+const cards = document.querySelectorAll('.cards-box');
+
+const cardsObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+                cardsObserver.unobserve(entry.target);
+            }
+        });
+    },
+    {
+        threshold: 0.1,
+    }
+);
+
+cards.forEach((card) => cardsObserver.observe(card));
