@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/app.js" defer></script>
+
+    <title>U-Decide</title>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h1>U-Decide</h1>
+            <h2>Can't decide? let U-Decide pick.</h2>
+            <form class="form-control">
+                <label for="inputCity">Enter Options</label>
+                <input type="text" id="inputCity" placeholder="Enter Option" autofocus/>
+                <button type="submit">Add Option</button>
+            </form>
+            
+            <p id="errorMessage"></p>
+
+            <div id="display">
+
+            </div>
+
+            <div class="control-btns">
+                <button id="decideBtn">Decide !</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
