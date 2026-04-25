@@ -114,7 +114,7 @@ generateSquare(5);
 
 // cards parrallax effect//
 document.querySelectorAll('.cards-box').forEach(card => {
-    const strength = 8; 
+    const strength = 10; 
 
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -232,5 +232,4 @@ const cardsObserver = new IntersectionObserver(
         threshold: 0.1,
     }
 );
-
 cards.forEach((card) => cardsObserver.observe(card));

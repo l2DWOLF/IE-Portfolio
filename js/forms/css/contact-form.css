@@ -16,8 +16,8 @@
     display: flex;
     align-items: center;
     padding: 5em 25px 2em 25px;
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px) saturate(200%) contrast(100%);
+    -webkit-backdrop-filter: blur(2px) saturate(200%) contrast(100%);
     box-sizing: border-box; 
     border-radius: 10px;
     border-bottom: 1px solid var(--accent);

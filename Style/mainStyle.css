@@ -123,8 +123,8 @@ header {
     opacity: 0;
     animation: show-content 1.2s linear forwards;
     animation-delay: 0.5s;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) saturate(200%);
+    -webkit-backdrop-filter: blur(10px) saturate(200%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .nav-bar a {
@@ -524,14 +524,14 @@ header {
 
 .logo-img {
     transition: 2s;
-    opacity: 0.6;
+    opacity: 0.8;
     border-radius: 50%;
     cursor: pointer;
 }
 
 .logo-img:hover {
     transform: translate(20px, -10px) scale(1.01);
-    opacity: .7;
+    opacity: .9;
     border-radius: 50%;
     box-shadow: 5px 5px 15px 0px rgba(76, 159, 242, 0.05);
 }
@@ -794,7 +794,7 @@ header {
 }
 
 .sticky-title {
-    min-width: 50vw;
+    min-width: 40vw;
     position: -webkit-sticky;
     position: sticky;
     top: 75px;
@@ -804,8 +804,8 @@ header {
     background: #00000025;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.80);
     text-align: center;
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(3px) saturate(300%);
+    backdrop-filter: blur(3px) saturate(300%);
     display: flex;
     flex-direction: column;
     align-items: center;
