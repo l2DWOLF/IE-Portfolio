@@ -12,22 +12,22 @@
     <div class="container">
         <div class="wrapper">
             <h1>U-Decide</h1>
-            <h2>Can't decide? let U-Decide pick.</h2>
+            <h2>Can't decide? let U-Decide decide.</h2>
             <form class="form-control">
                 <label for="inputCity">Enter Options</label>
                 <input type="text" id="inputCity" placeholder="Enter Option" autofocus/>
-                <button type="submit">Add Option</button>
+                <button id="addBtn" type="submit">Add Option</button>
             </form>
             
-            <p id="errorMessage"></p>
-
             <div id="display">
-
+                <p id="errorMessage"></p>
             </div>
 
             <div class="control-btns">
-                <button id="decideBtn">Decide !</button>
+                <button id="decideBtn">Decide!</button>
                 <button id="resetBtn">Reset</button>
+                <button id="x100Btn">x100</button>
+                <button id="autoBtn">auto</button>
             </div>
         </div>
     </div>
