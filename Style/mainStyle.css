@@ -943,7 +943,7 @@ header {
 }
 
 .card-tags {
-    background: #052c62;
+    background: #020d1b;
     color: rgba(0, 238, 255, 0.914);
     display: flex;
     align-items: center;
@@ -954,11 +954,11 @@ header {
     text-align: center;
     font-size: .9rem;
     font-weight: 600;
-    box-shadow: 0 0 15px 1px #00fbff63;
+    box-shadow: 0 0 10px 1px #00fbff28;
     opacity: 0.90;
     overflow: hidden;
     transition: 4s;
-    animation: tags-anim 4s linear infinite;
+    animation: tags-anim 10s linear infinite;
 }
 
 @keyframes tags-anim {
@@ -1673,7 +1673,7 @@ header {
         grid-template-columns: repeat(auto-fit, minmax(200px, 275px));
         grid-template-rows: repeat(auto-fill, 400px);
         width: 90% !important;
-        row-gap: 3.5em !important;
+        row-gap: 3em !important;
     }
 
 .cards-box{
@@ -1691,7 +1691,7 @@ header {
     transform: translateY(0px);
 }
 .cards-box.visible {
-    transform: scale(1.02);
+    transform: scale(1.04);
     border-radius: 2.2em;
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
