@@ -1489,8 +1489,12 @@ header {
         font-size: 2.5rem;
     }
 
+    .typing-text{
+        min-width: 233px;
+        text-align: left;
+    }
     .typing-text span {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .logo-img{
