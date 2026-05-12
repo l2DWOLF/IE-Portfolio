@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -66,6 +67,11 @@ h1, h2, h3, h4,
 p, li, ul, span,
 .logoImage{
         text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+h1, h2, h3, h4, h5, h6,
+p, button, span, ul, li, i, a{
+    user-select: none;
+    
 }
 
 /* <!-- --------Desktop CSS--------------> */
@@ -135,7 +141,6 @@ header {
 .nav-bar img {
     width: 40px;
     height: 40px;
-    color: pink !important;
 }
 .nav-bar .logoImage {
     font-size: var(--fs-navlogo);
@@ -154,6 +159,7 @@ header {
     display: flex;
     column-gap: 4em;
     box-sizing: border-box;
+    
 }
 
 .nav-bar ul li {
@@ -1131,12 +1137,23 @@ header {
     left: 0;
     height: 1px;
     width: 1px;
-    opacity: 0;
 
     border-top: 1px solid #00fbff;
-    animation: border-patrol 6s linear infinite;
+    animation: border-patrol 8s linear infinite,
+                border-blink 2s linear infinite;
 }
 
+@keyframes border-blink {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 @keyframes z-control{
     0%{
         transform: rotate3d(0, 0, 0, 0);
@@ -1150,15 +1167,15 @@ header {
     0%{
         top: 420px;
         left: -150px;
-        opacity: 0;
+        /* opacity: 0; */
         transform: rotate(90deg) translateZ(400px);
     }
     25%{
-        opacity: 0.2;
+        /* opacity: 0.2; */
         
     }
     50%{
-        opacity: 0.6;
+        /* opacity: 0.6; */
         border-bottom: 1px solid #00fbff;
         border-left: 1px solid #00fbff;
     }
@@ -1166,13 +1183,13 @@ header {
         border-right: 1px solid #00fbff;
     }
     90%{
-        opacity: 0;
+        /* opacity: 0; */
         border-bottom: 1px solid #00fbff;
     }
     100%{
         height: 150px;
         width: 150px;
-        opacity: 0;
+        /* opacity: 0; */
         transform: rotate(30deg) skew(30deg, 20deg) translateZ(0px);
         left: 800px;
         box-shadow: 0px 0px 10px 1px #00fbff;
@@ -1324,6 +1341,49 @@ header {
         padding-left: 2.5em !important;
         gap: 2em !important;
         height: 60px;
+        
+    }
+
+    .bars-container{
+        width: 100px; 
+        height: 100px; 
+        position: absolute;
+        top: -16px; 
+        left: -49px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        transform: rotateZ(-90deg);
+    }
+    .bars-container-right{
+        top: unset;
+        left: unset;
+        top: -5px;
+        right: -333px;
+        transform: rotateZ(90deg);
+    }
+    .bars{
+        box-shadow: 0px 1px 5px 1px rgba(0, 255, 255, 0.547);
+        width: 1px; 
+        height: 50px;
+        background: rgba(1, 255, 1, 0.293);
+        border-bottom: 3px solid rgb(167, 167, 167);
+    }
+    .bars-container-right .bars{
+        width: 1px;
+        height: 333px;
+    }
+    .nav-bar:has(#checkbox-status:checked) .bars-container-right .bars{
+    animation: extendBars .5s ease-in;
+    }
+
+    @keyframes extendBars{
+        0%{
+            height: 150px
+        }
+        100%{
+            height: 333px;
+        }
     }
 
     .nav-bar .logoImage{
@@ -1335,21 +1395,20 @@ header {
         flex-direction: column;
         align-items: center;
         width: 90%;
-        margin-top: 1.2em;
+        max-width: 300px;
+        margin-top: 5em;
         position: relative;
         background: linear-gradient(to bottom,
-                    rgba(100, 100, 100, 9),
-                    rgba(10, 15, 18, 0.8));
-        border: 1px solid rgba(255, 255, 255, 0.08);
+                    rgba(200, 200, 200, 0.3),
+                    rgba(100, 200, 200, 0.15));
+        border: 1px solid rgba(255, 255, 255, 0.15);
         border-bottom:none;
         border-radius: 12px;
-    
-        backdrop-filter: blur(20px) !important;
-        -webkit-backdrop-filter: blur(20px) !important;
-    
         box-shadow:
             0 10px 25px rgba(0, 0, 0, 0.4),
             inset 0 1px 2px rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px) saturate(400%) !important;
+            -webkit-backdrop-filter: blur(10px) saturate(400%) !important;
     }
 
     .checkON {
@@ -1363,49 +1422,59 @@ header {
         right: 0;
         width: 100%;
         z-index: 100;
-        background-color: var(--gradient1);
-        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         transition: 0.7s ease-out;
     }
 
     .nav-bar ul li a {
-        min-width: 70cqw;
-        height: auto;
-        padding: 0.5em !important;
+        width: 100%;
+        padding: 3px 0px;
         display: flex;
         justify-content: center !important;
-        font-size: 1.1em;
+        font-size: 1.15em;
         font-weight: 600;
-        color: rgba(184, 243, 255, 0.85) !important;
-        
-            background: rgba(15, 25, 30, 0.4);
-            border: 1px solid rgba(184, 243, 255, 0.15);
-            border-radius: 8px;
-        
-            transition: all 0.25s ease;
-        
-            box-shadow:
-                inset 0 1px 2px rgba(255, 255, 255, 0.05);
+        color: snow;
+        background: rgba(15, 25, 30, 0.4);
+        border: 1px solid rgba(184, 243, 255, 0.15);
+        border-radius: 8px;
+        transition: all 0.25s ease;
+    
+        box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.05);
     }
     .nav-bar ul {
-        gap: .4em;
-        padding: 10px;
+        gap: .8em;
+        padding: 3em 10px 1.25em;
+        border-bottom: 1px solid aqua;
     }
 
     .nav-bar ul li {
+        width: 133px;
         border: unset;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: inset 0px -15px 13px 10px rgba(100, 162, 165, 0.623);
+        border-radius: 12px;
+        border-left: 1px solid aqua;
+        border-right: 1px solid rgba(0, 255, 34, 0.37);
     }
+
     .nav-bar ul li:hover { 
-        width:80%;
         align-self: center;
-        margin: 15px;
+        margin: 3px;
+        background-color: unset;
+        color: silver;
+        transform: scale(1.0) translateY(-1%) rotateZ(2deg);
     }
     .nav-bar ul li a { 
         border-radius: 7px;
+        border: none;
+        background: transparent;
+        font-family: serif;
+        box-shadow: unset;
+
     }
     .nav-bar ul li:hover a{
-        border-bottom: unset;
+        border-bottom: unset; 
         
     } 
     .nav-bar ul li.active a{
@@ -1414,9 +1483,9 @@ header {
 
     .nav-bar ul li a:hover,
     .nav-bar ul li.active a:hover {
-        background-color: var(--accent3);
+       /*  background-color: var(--accent3);
         color: var(--backcolor3) !important;
-        box-shadow: 0 0 5px var(--secondary);
+        box-shadow: 0 0 5px var(--secondary); */
     }
 
     .checkON,
@@ -1431,14 +1500,23 @@ header {
         display: block;
     }
 
+    .nav-bar:has(#checkbox-status:checked) span{
+        font-size: .8rem;
+        transform: translate(-114px, 139px);
+        color: rgba(30, 255, 0, 0.616);
+    }
     #checkbox-status:checked~.checkbox-container {
-
         top: 0;
+    }
+
+    .nav-bar:has(#checkbox-status:checked) img {
+        transform: translate(-115px, 147px);
+        width: 30px;
+        z-index: 150;
     }
 
     #checkbox-status:checked~#coverlay,
     #checkbox-status:checked~#coverlay:hover {
-
         background: rgba(0, 0, 0, 0.066);
         -webkit-backdrop-filter: blur(2px) !important;
         backdrop-filter: blur(2px) !important;
@@ -1455,6 +1533,7 @@ header {
     #checkbox-status:checked~.checkON {
         display: none !important;
     }
+
 
     /* <!-- ----@Media Header End--------------> */
 
